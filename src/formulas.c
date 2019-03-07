@@ -12,48 +12,44 @@
 
 #include "../incl/fractol.h"
 
-t_calc	start_m()
+void	start_m(t_mass *map)
 {
-	t_calc a;
-
-	a.zoom = 1;
-	a.moveX = -0.5;
-	a.moveY = 0;
-	a.max_iter = 300;
-	a.newRe = a.newIm = a.oldIm = a.oldRe = 0;
-	a.pr = 0;
-	a.pi = 0;
-	return (a);
+//	map->zoom = 1;
+//	map->moveX = -0.5;
+//	map->moveY = 0;
+	map->a.max_iter = 300;
+	map->a.newRe = map->a.newIm = map->a.oldIm = map->a.oldRe = 0;
+	map->a.pr = 0;
+	map->a.pi = 0;
 }
 
 void	mandelbrot(t_mass *map)
 {
-	t_calc a;
 	int y;
 	int x;
 	int i;
 
 	y = -1;
-	a = start_m();
+	start_m(map);
 	while (++y < map->height)
 	{
 		x = -1;
 		while (++x < map->weight)
 		{
 			i = -1;
-			a.pr = 1.5 * (x - map->weight / 2) / (0.5 * a.zoom * map->weight) + a.moveX;
-			a.pi = (y - map->height / 2) / (0.5 * a.zoom * map->height) + a.moveY;
-			a.newRe = a.newIm = a.oldIm = a.oldRe = 0;
-			while (++i < a.max_iter)
+			map->a.pr = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
+			map->a.pi = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
+			map->a.newRe = map->a.newIm = map->a.oldIm = map->a.oldRe = 0;
+			while (++i < map->a.max_iter)
 			{
-				a.oldRe = a.newRe;
-				a.oldIm = a.newIm;
-				a.newRe = a.oldRe * a.oldRe - a.oldIm * a.oldIm + a.pr;
-				a.newIm = 2 * a.oldRe * a.oldIm + a.pi;
-				if (a.newRe * a.newRe + a.newIm * a.newIm > 4)
+				map->a.oldRe = map->a.newRe;
+				map->a.oldIm = map->a.newIm;
+				map->a.newRe = map->a.oldRe * map->a.oldRe - map->a.oldIm * map->a.oldIm + map->a.pr;
+				map->a.newIm = 2 * map->a.oldRe * map->a.oldIm + map->a.pi;
+				if (map->a.newRe * map->a.newRe + map->a.newIm * map->a.newIm > 4)
 					break;
 			}
-			if (i == a.max_iter)
+			if (i == map->a.max_iter)
 				map->image[x + (y * map->weight)] = 0xffe1ff;
 			else
 				map->image[x + (y * map->weight)] = 0xffe1ff * i;
@@ -61,47 +57,41 @@ void	mandelbrot(t_mass *map)
 	}
 }
 
-t_calc	start_j()
+void	start_j(t_mass *map)
 {
-	t_calc a;
-
-	a.zoom = 1;
-	a.moveX = 0;
-	a.moveY = 0;
-	a.max_iter = 300;
-	a.pr = -0.7;
-	a.pi = 0.27015;
-	a.newIm = a.newRe = a.oldIm = a.oldRe = 0;
-	return (a);
+	map->zoom = 1;
+	map->moveX = 0;
+	map->moveY = 0;
+	map->a.max_iter = 300;
+	map->a.newIm = map->a.newRe = map->a.oldIm = map->a.oldRe = 0;
 }
 
 void	julia(t_mass *map)
 {
-	t_calc a;
 	int y;
 	int x;
 	int i;
 
 	y = -1;
-	a = start_j();
+	start_j(map);
 	while (++y < map->height)
 	{
 		x = -1;
 		while (++x < map->weight)
 		{
 			i = -1;
-			a.newRe = 1.5 * (x - map->weight / 2) / (0.5 * a.zoom * map->weight) + a.moveX;
-			a.newIm = (y - map->height / 2) / (0.5 * a.zoom * map->height) + a.moveY;
-			while (++i < a.max_iter)
+			map->a.newRe = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
+			map->a.newIm = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
+			while (++i < map->a.max_iter)
 			{
-				a.oldRe = a.newRe;
-				a.oldIm = a.newIm;
-				a.newRe = a.oldRe * a.oldRe - a.oldIm * a.oldIm + a.pr;
-				a.newIm = 2 * a.oldRe * a.oldIm + a.pi;
-				if (a.newRe * a.newRe + a.newIm * a.newIm > 4)
+				map->a.oldRe = map->a.newRe;
+				map->a.oldIm = map->a.newIm;
+				map->a.newRe = map->a.oldRe * map->a.oldRe - map->a.oldIm * map->a.oldIm + map->cRe;
+				map->a.newIm = 2 * map->a.oldRe * map->a.oldIm + map->cIm;
+				if (map->a.newRe * map->a.newRe + map->a.newIm * map->a.newIm > 4)
 					break;
 			}
-			if (i == a.max_iter)
+			if (i == map->a.max_iter)
 				map->image[x + (y * map->weight)] = 0xffe1ff;
 			else
 				map->image[x + (y * map->weight)] = 0xffe1ff * i;

@@ -14,32 +14,23 @@
 
 int	exit_x()
 {
+	ft_printf("\033[1;32m");
+	ft_printf("Usage: ./fractol [name of fractol]\n");
+	ft_printf("Name variants:\n");
+	ft_printf("- julia\n- mandelbrot\n");
+	ft_printf("\033[0m");
 	exit(1);
 }
 
-int	key_press(int keycode)
+t_calc create_calc()
 {
-	ft_printf("%d\n", keycode);
-	if (keycode == 53)
-		exit(1);
-	return (0);
-}
+	t_calc a;
 
-int	mouse_move(int keycode)
-{
-	ft_printf("%d\n", keycode);
-	if (keycode == 4)
-		ft_printf("scroll up\n");
-	else if (keycode == 5)
-		ft_printf("scroll down\n");
-	return (0);
-}
-void	find_name(t_mass *map, char **av)
-{
-	if (!ft_strcmp(av[1], "julia"))
-		map->mark = 1;
-	else if (!ft_strcmp(av[1], "mandelbrot"))
-		map->mark = 2;
+	a.max_iter = 300;
+	a.newRe = a.newIm = a.oldIm = a.oldRe = 0;
+	a.pr = 0;
+	a.pi = 0;
+	return(a);
 }
 
 void	choose(t_mass *map)
@@ -48,7 +39,43 @@ void	choose(t_mass *map)
 		julia(map);
 	else if (map->mark == 2)
 		mandelbrot(map);
+	mlx_put_image_to_window(map->mlx, map->wind, map->img, 0, 0);
 }
+
+void	find_name(t_mass *map, char **av)
+{
+	if (!ft_strcmp(av[1], "julia"))
+		map->mark = 1;
+	else if (!ft_strcmp(av[1], "mandelbrot"))
+		map->mark = 2;
+//	else
+//		exit_x();
+}
+
+//void	create_map(t_mass *map)
+//{
+//	map->a = create_calc();
+//	map->weight = 1300;
+//	map->height = 900;
+//	map->endian = 0;
+//	map->bpp = 32;
+//	map->size_line = map->weight;
+//	map->zoom = 1;
+//	map->moveX = -0.5;
+//	map->moveY = 0;
+//	map->cRe = -0.7;
+//	map->cIm = 0.27015;
+//	map->mlx = mlx_init();
+//	map->wind = mlx_new_window(map->mlx, map->weight, map->height, "Fractol");
+//	map->img = mlx_new_image(map->mlx, map->weight, map->height);
+//	map->image = (int *)mlx_get_data_addr(map->img, &map->bpp, &map->size_line, &map->endian);
+//	choose(map);
+//	mlx_hook(map->wind, 2, 0, key_press, &map);
+//	mlx_mouse_hook(map->wind, mouse_move, &map);
+//	mlx_hook(map->wind, 6, 0, julia_move, &map);
+//	mlx_hook(map->wind, 17, 0, exit_x, &map);
+//	mlx_loop(map->mlx);
+//}
 
 int main(int ac, char **av)
 {
@@ -57,21 +84,28 @@ int main(int ac, char **av)
 	if (ac > 1)
 		find_name(&map, av);
 	else
-		exit(1);
-	map.weight = 1500;
-	map.height = 1000;
+		exit_x();
+	map.a = create_calc();
+	map.weight = 1300;
+	map.height = 900;
 	map.endian = 0;
 	map.bpp = 32;
-	map.size_line = 1500;
+	map.size_line = map.weight;
+	map.zoom = 1;
+	map.moveX = -0.5;
+	map.moveY = 0;
+	map.cRe = -0.7;
+	map.cIm = 0.27015;
 	map.mlx = mlx_init();
-	map.wind = mlx_new_window(map.mlx, map.weight, map.weight, "Fractol");
-	map.img = mlx_new_image(map.mlx, map.weight, map.weight);
+	map.wind = mlx_new_window(map.mlx, map.weight, map.height, "Fractol");
+	map.img = mlx_new_image(map.mlx, map.weight, map.height);
 	map.image = (int *)mlx_get_data_addr(map.img, &map.bpp, &map.size_line, &map.endian);
 	choose(&map);
-	mlx_put_image_to_window(map.mlx, map.wind, map.img, 0, 0);
 	mlx_hook(map.wind, 2, 0, key_press, &map);
-	mlx_hook(map.wind, 6, 0, mouse_move, &map);
+	mlx_mouse_hook(map.wind, mouse_move, &map);
+	mlx_hook(map.wind, 6, 0, julia_move, &map);
 	mlx_hook(map.wind, 17, 0, exit_x, &map);
 	mlx_loop(map.mlx);
+//	create_map(&map);
 	return(0);
 }

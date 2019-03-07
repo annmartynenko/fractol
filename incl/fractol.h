@@ -18,14 +18,18 @@
 # include "mlx.h"
 # include <math.h>
 # include "../src/libft/libft.h"
+# include <pthread.h>
 
-typedef struct	s_xyz
+typedef struct	s_calc
 {
-	double	x;
-	double	y;
-	double	z;
-	int		color;
-}				t_xyz;
+	double	pr;
+	double	pi;
+	double	newRe;
+	double	newIm;
+	double	oldRe;
+	double	oldIm;
+	int		max_iter;
+}				t_calc;
 
 typedef struct	s_mass
 {
@@ -39,27 +43,22 @@ typedef struct	s_mass
 	int		size_line;
 	int		endian;
 	int 	mark;
-	t_xyz	**coord;
-	double	angle[3];
-	double	koef;
-	double	center[2];
+	double	zoom;
+	double	moveX;
+	double	moveY;
+	double	cRe;
+	double 	cIm;
+	t_calc	a;
 }				t_mass;
-
-typedef struct	s_calc
-{
-	double pr;
-	double pi;
-	double newRe;
-	double newIm;
-	double oldRe;
-	double oldIm;
-	double zoom;
-	double moveX;
-	double moveY;
-	int max_iter;
-}				t_calc;
 
 void	mandelbrot(t_mass *map);
 void	julia(t_mass *map);
+int		key_press(int keycode, t_mass *map);
+int		mouse_move(int keycode,int x, int y, t_mass *map);
+void	find_name(t_mass *map, char **av);
+int		julia_move(int x, int y, t_mass *map);
+void	choose(t_mass *map);
+t_calc	create_calc();
+int		julia_move(int x, int y, t_mass *map);
 
 #endif
