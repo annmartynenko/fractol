@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/amartyne/fractol
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/amartyne/am
 -- Configuring done
 CMake Error at CMakeLists.txt:8 (add_executable):
   Cannot find source file:
@@ -13,4 +13,4 @@ CMake Error at CMakeLists.txt:8 (add_executable):
   No SOURCES given to target: fractol
 
 
--- Build files have been written to: /Users/amartyne/fractol/cmake-build-debug
+-- Build files have been written to: /Users/amartyne/am/cmake-build-debug

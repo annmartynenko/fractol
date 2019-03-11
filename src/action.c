@@ -12,7 +12,7 @@
 
 #include "../incl/fractol.h"
 
-int	key_press(int keycode, t_mass *map)
+int	key_press(int keycode, t_mass *map, int x, int y)
 {
 	mlx_clear_window(map->mlx, map->wind);
 	ft_printf("x %d y %d\n", map->moveX, map->moveY);
@@ -31,7 +31,7 @@ int	key_press(int keycode, t_mass *map)
 	else if (keycode == 78)
 		map->zoom *= 0.9;
 	ft_printf("x1 %d y1 %d\n", map->moveX, map->moveY);
-	choose(map);
+	choose(map, x, y);
 	return (0);
 }
 
@@ -45,7 +45,7 @@ int	mouse_move(int keycode,int x, int y, t_mass *map)
 		map->zoom *= 1.1;
 	else if (keycode == 5)
 		map->zoom *= 0.9;
-	choose(map);
+	choose(map, x, y);
 	return (0);
 }
 
@@ -61,6 +61,6 @@ int	julia_move(int x, int y, t_mass *map)
 			map->cRe = -0.7 * x / 1000;
 		}
 	}
-	choose(map);
+	choose(map, x, y);
 	return (0);
 }

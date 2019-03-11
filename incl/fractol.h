@@ -19,6 +19,9 @@
 # include <math.h>
 # include "../src/libft/libft.h"
 # include <pthread.h>
+# define PTHREAD 8
+# define HEIGHT 900
+# define WEIGHT 1300
 
 typedef struct	s_calc
 {
@@ -51,14 +54,22 @@ typedef struct	s_mass
 	t_calc	a;
 }				t_mass;
 
-void	mandelbrot(t_mass *map);
+typedef struct	s_read
+{
+	int			n;
+	t_mass		*mas;
+	pthread_t	way;
+}				t_read;
+
+void	mandelbrot(t_mass *map, int x, int y);
 void	julia(t_mass *map);
-int		key_press(int keycode, t_mass *map);
+int		key_press(int keycode, t_mass *map, int x, int y);
 int		mouse_move(int keycode,int x, int y, t_mass *map);
 void	find_name(t_mass *map, char **av);
 int		julia_move(int x, int y, t_mass *map);
-void	choose(t_mass *map);
+void	choose(t_mass *map, int x, int y);
 t_calc	create_calc();
 int		julia_move(int x, int y, t_mass *map);
+void	mult(t_mass *map);
 
 #endif

@@ -23,19 +23,19 @@ void	start_m(t_mass *map)
 	map->a.pi = 0;
 }
 
-void	mandelbrot(t_mass *map)
+void	mandelbrot(t_mass *map, int x, int y)
 {
-	int y;
-	int x;
+//	int y;
+//	int x;
 	int i;
 
-	y = -1;
+//	y = -1;
 	start_m(map);
-	while (++y < map->height)
-	{
-		x = -1;
-		while (++x < map->weight)
-		{
+//	while (++y < map->height)
+//	{
+//		x = -1;
+//		while (++x < map->weight)
+//		{
 			i = -1;
 			map->a.pr = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
 			map->a.pi = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
@@ -53,8 +53,8 @@ void	mandelbrot(t_mass *map)
 				map->image[x + (y * map->weight)] = 0xffe1ff;
 			else
 				map->image[x + (y * map->weight)] = 0xffe1ff * i;
-		}
-	}
+//		}
+//	}
 }
 
 void	start_j(t_mass *map)

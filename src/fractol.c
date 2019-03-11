@@ -33,13 +33,13 @@ t_calc create_calc()
 	return(a);
 }
 
-void	choose(t_mass *map)
+void	choose(t_mass *map, int x, int y)
 {
 	if (map->mark == 1)
 		julia(map);
 	else if (map->mark == 2)
-		mandelbrot(map);
-	mlx_put_image_to_window(map->mlx, map->wind, map->img, 0, 0);
+		mandelbrot(map, x, y);
+//	mlx_put_image_to_window(map->mlx, map->wind, map->img, 0, 0);
 }
 
 void	find_name(t_mass *map, char **av)
@@ -52,30 +52,24 @@ void	find_name(t_mass *map, char **av)
 //		exit_x();
 }
 
-//void	create_map(t_mass *map)
-//{
-//	map->a = create_calc();
-//	map->weight = 1300;
-//	map->height = 900;
-//	map->endian = 0;
-//	map->bpp = 32;
-//	map->size_line = map->weight;
-//	map->zoom = 1;
-//	map->moveX = -0.5;
-//	map->moveY = 0;
-//	map->cRe = -0.7;
-//	map->cIm = 0.27015;
-//	map->mlx = mlx_init();
-//	map->wind = mlx_new_window(map->mlx, map->weight, map->height, "Fractol");
-//	map->img = mlx_new_image(map->mlx, map->weight, map->height);
-//	map->image = (int *)mlx_get_data_addr(map->img, &map->bpp, &map->size_line, &map->endian);
-//	choose(map);
-//	mlx_hook(map->wind, 2, 0, key_press, &map);
-//	mlx_mouse_hook(map->wind, mouse_move, &map);
-//	mlx_hook(map->wind, 6, 0, julia_move, &map);
-//	mlx_hook(map->wind, 17, 0, exit_x, &map);
-//	mlx_loop(map->mlx);
-//}
+void	create_map(t_mass *map)
+{
+	map->a = create_calc();
+	map->weight = 1300;
+	map->height = 900;
+	map->endian = 0;
+	map->bpp = 32;
+	map->size_line = map->weight;
+	map->zoom = 1;
+	map->moveX = -0.5;
+	map->moveY = 0;
+	map->cRe = -0.7;
+	map->cIm = 0.27015;
+	map->mlx = mlx_init();
+	map->wind = mlx_new_window(map->mlx, map->weight, map->height, "Fractol");
+	map->img = mlx_new_image(map->mlx, map->weight, map->height);
+	map->image = (int *)mlx_get_data_addr(map->img, &map->bpp, &map->size_line, &map->endian);
+}
 
 int main(int ac, char **av)
 {
@@ -85,26 +79,13 @@ int main(int ac, char **av)
 		find_name(&map, av);
 	else
 		exit_x();
-	map.a = create_calc();
-	map.weight = 1300;
-	map.height = 900;
-	map.endian = 0;
-	map.bpp = 32;
-	map.size_line = map.weight;
-	map.zoom = 1;
-	map.moveX = -0.5;
-	map.moveY = 0;
-	map.cRe = -0.7;
-	map.cIm = 0.27015;
-	map.mlx = mlx_init();
-	map.wind = mlx_new_window(map.mlx, map.weight, map.height, "Fractol");
-	map.img = mlx_new_image(map.mlx, map.weight, map.height);
-	map.image = (int *)mlx_get_data_addr(map.img, &map.bpp, &map.size_line, &map.endian);
-	choose(&map);
-	mlx_hook(map.wind, 2, 0, key_press, &map);
-	mlx_mouse_hook(map.wind, mouse_move, &map);
-	mlx_hook(map.wind, 6, 0, julia_move, &map);
-	mlx_hook(map.wind, 17, 0, exit_x, &map);
+	create_map(&map);
+//	choose(&map);
+	mult(&map);
+//	mlx_hook(map.wind, 2, 0, key_press, &map);
+//	mlx_mouse_hook(map.wind, mouse_move, &map);
+//	mlx_hook(map.wind, 6, 0, julia_move, &map);
+//	mlx_hook(map.wind, 17, 0, exit_x, &map);
 	mlx_loop(map.mlx);
 //	create_map(&map);
 	return(0);

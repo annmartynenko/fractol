@@ -11,6 +11,7 @@ add_executable(fractol
         src/rotation.c
         src/draw_line.c
         src/action.c
+        src/mult.c
         src/formulas.c
         src/libft/ft_printf/extra_fun.c
         src/libft/ft_printf/find_flag.c
