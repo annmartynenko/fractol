@@ -51,7 +51,6 @@ typedef struct	s_mass
 	double	moveY;
 	double	cRe;
 	double 	cIm;
-	t_calc	a;
 }				t_mass;
 
 typedef struct	s_read
@@ -62,14 +61,13 @@ typedef struct	s_read
 }				t_read;
 
 void	mandelbrot(t_mass *map, int x, int y);
-void	julia(t_mass *map);
-int		key_press(int keycode, t_mass *map, int x, int y);
+void	julia(t_mass *map, int x, int y);
+int		key_press(int keycode, t_mass *map);
 int		mouse_move(int keycode,int x, int y, t_mass *map);
 void	find_name(t_mass *map, char **av);
 int		julia_move(int x, int y, t_mass *map);
 void	choose(t_mass *map, int x, int y);
-t_calc	create_calc();
-int		julia_move(int x, int y, t_mass *map);
 void	mult(t_mass *map);
+void	heart(t_mass *map, int x, int y);
 
 #endif

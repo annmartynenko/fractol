@@ -48,7 +48,7 @@ $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
 
 $(NAME): $(OBJ)
-	@$(CC) $(FLAGS) -lmlx -framework OpenGL -framework AppKit $(OBJ) -o $(NAME) -I $(INCLD_DIR) $(LIBFT)
+	@$(CC) $(FLAGS) -lmlx -framework OpenGL -framework AppKit -lpthread $(OBJ) -o $(NAME) -I $(INCLD_DIR) $(LIBFT)
 	@printf "\n$(GREEN)$(OK_STRING)\n\n"
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c $(addprefix $(INCLD_DIR), $(INCLD)) $(LIBFT)

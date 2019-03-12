@@ -14,15 +14,14 @@
 
 void	*drawing(void *map)
 {
-	int x;
-	int y;
-	int yy;
+	int 	x;
+	int		y;
+	int		yy;
 	t_read	*p;
 
 	p = (t_read*)map;
-	yy = HEIGHT / PTHREAD * (p->n + 1);
-	y = HEIGHT / PTHREAD * p->n ;
-	x = -1;
+	yy = (HEIGHT  * (p->n + 1) / PTHREAD);
+	y = (HEIGHT * (p->n) / PTHREAD) - 1;
 	while (++y < yy)
 	{
 		x = -1;
@@ -43,12 +42,13 @@ void	mult(t_mass *map)
 	it = (t_read*)malloc(sizeof(t_read) * PTHREAD);
 	while (++i < PTHREAD)
 	{
-		it->n = i;
-		it->mas = map;
-		pthread_create(&it[i].way, NULL, &drawing, &it[i]);
+		it[i].n = i;
+		it[i].mas = map;
+		pthread_create(&it[i].way, NULL, drawing, &it[i]);
 	}
 	i = -1;
 	while (++i < PTHREAD)
 		pthread_join(it[i].way, NULL);
 	mlx_put_image_to_window(map->mlx, map->wind, map->img, 0, 0);
+	i = -1;
 }

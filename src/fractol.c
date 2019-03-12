@@ -22,24 +22,14 @@ int	exit_x()
 	exit(1);
 }
 
-t_calc create_calc()
-{
-	t_calc a;
-
-	a.max_iter = 300;
-	a.newRe = a.newIm = a.oldIm = a.oldRe = 0;
-	a.pr = 0;
-	a.pi = 0;
-	return(a);
-}
-
 void	choose(t_mass *map, int x, int y)
 {
 	if (map->mark == 1)
-		julia(map);
+		julia(map, x, y);
 	else if (map->mark == 2)
 		mandelbrot(map, x, y);
-//	mlx_put_image_to_window(map->mlx, map->wind, map->img, 0, 0);
+	else if (map->mark == 3)
+		heart(map, x, y);
 }
 
 void	find_name(t_mass *map, char **av)
@@ -48,15 +38,16 @@ void	find_name(t_mass *map, char **av)
 		map->mark = 1;
 	else if (!ft_strcmp(av[1], "mandelbrot"))
 		map->mark = 2;
+	else if(!ft_strcmp(av[1], "heart"))
+		map->mark = 3;
 //	else
 //		exit_x();
 }
 
 void	create_map(t_mass *map)
 {
-	map->a = create_calc();
-	map->weight = 1300;
-	map->height = 900;
+	map->weight = WEIGHT;
+	map->height = HEIGHT;
 	map->endian = 0;
 	map->bpp = 32;
 	map->size_line = map->weight;
@@ -80,13 +71,11 @@ int main(int ac, char **av)
 	else
 		exit_x();
 	create_map(&map);
-//	choose(&map);
 	mult(&map);
-//	mlx_hook(map.wind, 2, 0, key_press, &map);
-//	mlx_mouse_hook(map.wind, mouse_move, &map);
-//	mlx_hook(map.wind, 6, 0, julia_move, &map);
-//	mlx_hook(map.wind, 17, 0, exit_x, &map);
+	mlx_hook(map.wind, 2, 0, key_press, &map);
+	mlx_mouse_hook(map.wind, mouse_move, &map);
+	mlx_hook(map.wind, 6, 0, julia_move, &map);
+	mlx_hook(map.wind, 17, 0, exit_x, &map);
 	mlx_loop(map.mlx);
-//	create_map(&map);
 	return(0);
 }
