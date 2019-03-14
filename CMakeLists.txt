@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.13)
 project(fractol C)
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -lmlx -framework OpenGL -framework AppKit")
+
 set(CMAKE_C_STANDARD 11)
 
 include_directories(.)
 
-add_executable(fractol
+add_executable(am
         src/fractol.c
         incl/fractol.h
-        src/rotation.c
-        src/draw_line.c
         src/action.c
         src/mult.c
         src/formulas.c

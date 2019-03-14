@@ -1,4 +1,4 @@
-# Install script for directory: /Users/amartyne/fractol
+# Install script for directory: /Users/amartyne/am
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/amartyne/fractol/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/amartyne/am/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

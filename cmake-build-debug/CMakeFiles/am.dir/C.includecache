@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/amartyne/am/incl/fractol.h
+unistd.h
+-
+stdlib.h
+-
+mlx.h
+/Users/amartyne/am/incl/mlx.h
+math.h
+-
+../src/libft/libft.h
+/Users/amartyne/am/src/libft/libft.h
+pthread.h
+-
+
+/Users/amartyne/am/src/formulas.c
+../incl/fractol.h
+/Users/amartyne/am/incl/fractol.h
+
+/Users/amartyne/am/src/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+stdarg.h
+-
+

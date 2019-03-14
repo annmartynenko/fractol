@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/amartyne/fractol
+CMAKE_SOURCE_DIR = /Users/amartyne/am
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/amartyne/fractol/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/amartyne/am/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/fractol/cmake-build-debug/CMakeFiles /Users/amartyne/fractol/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/am/cmake-build-debug/CMakeFiles /Users/amartyne/am/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/fractol/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/amartyne/am/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named fractol
+# Target rules for targets named am
 
 # Build rule for target.
-fractol: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 fractol
-.PHONY : fractol
+am: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 am
+.PHONY : am
 
 # fast build rule for target.
-fractol/fast:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/build
-.PHONY : fractol/fast
+am/fast:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/build
+.PHONY : am/fast
 
 src/action.o: src/action.c.o
 
@@ -129,7 +129,7 @@ src/action.o: src/action.c.o
 
 # target to build an object file
 src/action.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/action.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action.c.o
 .PHONY : src/action.c.o
 
 src/action.i: src/action.c.i
@@ -138,7 +138,7 @@ src/action.i: src/action.c.i
 
 # target to preprocess a source file
 src/action.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/action.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action.c.i
 .PHONY : src/action.c.i
 
 src/action.s: src/action.c.s
@@ -147,35 +147,8 @@ src/action.s: src/action.c.s
 
 # target to generate assembly for a file
 src/action.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/action.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action.c.s
 .PHONY : src/action.c.s
-
-src/draw_line.o: src/draw_line.c.o
-
-.PHONY : src/draw_line.o
-
-# target to build an object file
-src/draw_line.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/draw_line.c.o
-.PHONY : src/draw_line.c.o
-
-src/draw_line.i: src/draw_line.c.i
-
-.PHONY : src/draw_line.i
-
-# target to preprocess a source file
-src/draw_line.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/draw_line.c.i
-.PHONY : src/draw_line.c.i
-
-src/draw_line.s: src/draw_line.c.s
-
-.PHONY : src/draw_line.s
-
-# target to generate assembly for a file
-src/draw_line.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/draw_line.c.s
-.PHONY : src/draw_line.c.s
 
 src/formulas.o: src/formulas.c.o
 
@@ -183,7 +156,7 @@ src/formulas.o: src/formulas.c.o
 
 # target to build an object file
 src/formulas.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/formulas.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas.c.o
 .PHONY : src/formulas.c.o
 
 src/formulas.i: src/formulas.c.i
@@ -192,7 +165,7 @@ src/formulas.i: src/formulas.c.i
 
 # target to preprocess a source file
 src/formulas.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/formulas.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas.c.i
 .PHONY : src/formulas.c.i
 
 src/formulas.s: src/formulas.c.s
@@ -201,7 +174,7 @@ src/formulas.s: src/formulas.c.s
 
 # target to generate assembly for a file
 src/formulas.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/formulas.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas.c.s
 .PHONY : src/formulas.c.s
 
 src/fractol.o: src/fractol.c.o
@@ -210,7 +183,7 @@ src/fractol.o: src/fractol.c.o
 
 # target to build an object file
 src/fractol.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/fractol.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/fractol.c.o
 .PHONY : src/fractol.c.o
 
 src/fractol.i: src/fractol.c.i
@@ -219,7 +192,7 @@ src/fractol.i: src/fractol.c.i
 
 # target to preprocess a source file
 src/fractol.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/fractol.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/fractol.c.i
 .PHONY : src/fractol.c.i
 
 src/fractol.s: src/fractol.c.s
@@ -228,7 +201,7 @@ src/fractol.s: src/fractol.c.s
 
 # target to generate assembly for a file
 src/fractol.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/fractol.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/fractol.c.s
 .PHONY : src/fractol.c.s
 
 src/libft/ft_arrfree.o: src/libft/ft_arrfree.c.o
@@ -237,7 +210,7 @@ src/libft/ft_arrfree.o: src/libft/ft_arrfree.c.o
 
 # target to build an object file
 src/libft/ft_arrfree.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_arrfree.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_arrfree.c.o
 .PHONY : src/libft/ft_arrfree.c.o
 
 src/libft/ft_arrfree.i: src/libft/ft_arrfree.c.i
@@ -246,7 +219,7 @@ src/libft/ft_arrfree.i: src/libft/ft_arrfree.c.i
 
 # target to preprocess a source file
 src/libft/ft_arrfree.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_arrfree.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_arrfree.c.i
 .PHONY : src/libft/ft_arrfree.c.i
 
 src/libft/ft_arrfree.s: src/libft/ft_arrfree.c.s
@@ -255,7 +228,7 @@ src/libft/ft_arrfree.s: src/libft/ft_arrfree.c.s
 
 # target to generate assembly for a file
 src/libft/ft_arrfree.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_arrfree.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_arrfree.c.s
 .PHONY : src/libft/ft_arrfree.c.s
 
 src/libft/ft_atoi.o: src/libft/ft_atoi.c.o
@@ -264,7 +237,7 @@ src/libft/ft_atoi.o: src/libft/ft_atoi.c.o
 
 # target to build an object file
 src/libft/ft_atoi.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_atoi.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_atoi.c.o
 .PHONY : src/libft/ft_atoi.c.o
 
 src/libft/ft_atoi.i: src/libft/ft_atoi.c.i
@@ -273,7 +246,7 @@ src/libft/ft_atoi.i: src/libft/ft_atoi.c.i
 
 # target to preprocess a source file
 src/libft/ft_atoi.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_atoi.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_atoi.c.i
 .PHONY : src/libft/ft_atoi.c.i
 
 src/libft/ft_atoi.s: src/libft/ft_atoi.c.s
@@ -282,7 +255,7 @@ src/libft/ft_atoi.s: src/libft/ft_atoi.c.s
 
 # target to generate assembly for a file
 src/libft/ft_atoi.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_atoi.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_atoi.c.s
 .PHONY : src/libft/ft_atoi.c.s
 
 src/libft/ft_bzero.o: src/libft/ft_bzero.c.o
@@ -291,7 +264,7 @@ src/libft/ft_bzero.o: src/libft/ft_bzero.c.o
 
 # target to build an object file
 src/libft/ft_bzero.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_bzero.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_bzero.c.o
 .PHONY : src/libft/ft_bzero.c.o
 
 src/libft/ft_bzero.i: src/libft/ft_bzero.c.i
@@ -300,7 +273,7 @@ src/libft/ft_bzero.i: src/libft/ft_bzero.c.i
 
 # target to preprocess a source file
 src/libft/ft_bzero.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_bzero.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_bzero.c.i
 .PHONY : src/libft/ft_bzero.c.i
 
 src/libft/ft_bzero.s: src/libft/ft_bzero.c.s
@@ -309,7 +282,7 @@ src/libft/ft_bzero.s: src/libft/ft_bzero.c.s
 
 # target to generate assembly for a file
 src/libft/ft_bzero.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_bzero.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_bzero.c.s
 .PHONY : src/libft/ft_bzero.c.s
 
 src/libft/ft_foreach.o: src/libft/ft_foreach.c.o
@@ -318,7 +291,7 @@ src/libft/ft_foreach.o: src/libft/ft_foreach.c.o
 
 # target to build an object file
 src/libft/ft_foreach.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_foreach.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_foreach.c.o
 .PHONY : src/libft/ft_foreach.c.o
 
 src/libft/ft_foreach.i: src/libft/ft_foreach.c.i
@@ -327,7 +300,7 @@ src/libft/ft_foreach.i: src/libft/ft_foreach.c.i
 
 # target to preprocess a source file
 src/libft/ft_foreach.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_foreach.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_foreach.c.i
 .PHONY : src/libft/ft_foreach.c.i
 
 src/libft/ft_foreach.s: src/libft/ft_foreach.c.s
@@ -336,7 +309,7 @@ src/libft/ft_foreach.s: src/libft/ft_foreach.c.s
 
 # target to generate assembly for a file
 src/libft/ft_foreach.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_foreach.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_foreach.c.s
 .PHONY : src/libft/ft_foreach.c.s
 
 src/libft/ft_isalnum.o: src/libft/ft_isalnum.c.o
@@ -345,7 +318,7 @@ src/libft/ft_isalnum.o: src/libft/ft_isalnum.c.o
 
 # target to build an object file
 src/libft/ft_isalnum.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalnum.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalnum.c.o
 .PHONY : src/libft/ft_isalnum.c.o
 
 src/libft/ft_isalnum.i: src/libft/ft_isalnum.c.i
@@ -354,7 +327,7 @@ src/libft/ft_isalnum.i: src/libft/ft_isalnum.c.i
 
 # target to preprocess a source file
 src/libft/ft_isalnum.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalnum.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalnum.c.i
 .PHONY : src/libft/ft_isalnum.c.i
 
 src/libft/ft_isalnum.s: src/libft/ft_isalnum.c.s
@@ -363,7 +336,7 @@ src/libft/ft_isalnum.s: src/libft/ft_isalnum.c.s
 
 # target to generate assembly for a file
 src/libft/ft_isalnum.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalnum.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalnum.c.s
 .PHONY : src/libft/ft_isalnum.c.s
 
 src/libft/ft_isalpha.o: src/libft/ft_isalpha.c.o
@@ -372,7 +345,7 @@ src/libft/ft_isalpha.o: src/libft/ft_isalpha.c.o
 
 # target to build an object file
 src/libft/ft_isalpha.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalpha.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalpha.c.o
 .PHONY : src/libft/ft_isalpha.c.o
 
 src/libft/ft_isalpha.i: src/libft/ft_isalpha.c.i
@@ -381,7 +354,7 @@ src/libft/ft_isalpha.i: src/libft/ft_isalpha.c.i
 
 # target to preprocess a source file
 src/libft/ft_isalpha.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalpha.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalpha.c.i
 .PHONY : src/libft/ft_isalpha.c.i
 
 src/libft/ft_isalpha.s: src/libft/ft_isalpha.c.s
@@ -390,7 +363,7 @@ src/libft/ft_isalpha.s: src/libft/ft_isalpha.c.s
 
 # target to generate assembly for a file
 src/libft/ft_isalpha.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isalpha.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isalpha.c.s
 .PHONY : src/libft/ft_isalpha.c.s
 
 src/libft/ft_isascii.o: src/libft/ft_isascii.c.o
@@ -399,7 +372,7 @@ src/libft/ft_isascii.o: src/libft/ft_isascii.c.o
 
 # target to build an object file
 src/libft/ft_isascii.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isascii.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isascii.c.o
 .PHONY : src/libft/ft_isascii.c.o
 
 src/libft/ft_isascii.i: src/libft/ft_isascii.c.i
@@ -408,7 +381,7 @@ src/libft/ft_isascii.i: src/libft/ft_isascii.c.i
 
 # target to preprocess a source file
 src/libft/ft_isascii.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isascii.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isascii.c.i
 .PHONY : src/libft/ft_isascii.c.i
 
 src/libft/ft_isascii.s: src/libft/ft_isascii.c.s
@@ -417,7 +390,7 @@ src/libft/ft_isascii.s: src/libft/ft_isascii.c.s
 
 # target to generate assembly for a file
 src/libft/ft_isascii.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isascii.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isascii.c.s
 .PHONY : src/libft/ft_isascii.c.s
 
 src/libft/ft_isdigit.o: src/libft/ft_isdigit.c.o
@@ -426,7 +399,7 @@ src/libft/ft_isdigit.o: src/libft/ft_isdigit.c.o
 
 # target to build an object file
 src/libft/ft_isdigit.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isdigit.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isdigit.c.o
 .PHONY : src/libft/ft_isdigit.c.o
 
 src/libft/ft_isdigit.i: src/libft/ft_isdigit.c.i
@@ -435,7 +408,7 @@ src/libft/ft_isdigit.i: src/libft/ft_isdigit.c.i
 
 # target to preprocess a source file
 src/libft/ft_isdigit.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isdigit.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isdigit.c.i
 .PHONY : src/libft/ft_isdigit.c.i
 
 src/libft/ft_isdigit.s: src/libft/ft_isdigit.c.s
@@ -444,7 +417,7 @@ src/libft/ft_isdigit.s: src/libft/ft_isdigit.c.s
 
 # target to generate assembly for a file
 src/libft/ft_isdigit.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isdigit.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isdigit.c.s
 .PHONY : src/libft/ft_isdigit.c.s
 
 src/libft/ft_isprint.o: src/libft/ft_isprint.c.o
@@ -453,7 +426,7 @@ src/libft/ft_isprint.o: src/libft/ft_isprint.c.o
 
 # target to build an object file
 src/libft/ft_isprint.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isprint.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isprint.c.o
 .PHONY : src/libft/ft_isprint.c.o
 
 src/libft/ft_isprint.i: src/libft/ft_isprint.c.i
@@ -462,7 +435,7 @@ src/libft/ft_isprint.i: src/libft/ft_isprint.c.i
 
 # target to preprocess a source file
 src/libft/ft_isprint.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isprint.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isprint.c.i
 .PHONY : src/libft/ft_isprint.c.i
 
 src/libft/ft_isprint.s: src/libft/ft_isprint.c.s
@@ -471,7 +444,7 @@ src/libft/ft_isprint.s: src/libft/ft_isprint.c.s
 
 # target to generate assembly for a file
 src/libft/ft_isprint.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_isprint.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_isprint.c.s
 .PHONY : src/libft/ft_isprint.c.s
 
 src/libft/ft_itoa.o: src/libft/ft_itoa.c.o
@@ -480,7 +453,7 @@ src/libft/ft_itoa.o: src/libft/ft_itoa.c.o
 
 # target to build an object file
 src/libft/ft_itoa.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_itoa.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_itoa.c.o
 .PHONY : src/libft/ft_itoa.c.o
 
 src/libft/ft_itoa.i: src/libft/ft_itoa.c.i
@@ -489,7 +462,7 @@ src/libft/ft_itoa.i: src/libft/ft_itoa.c.i
 
 # target to preprocess a source file
 src/libft/ft_itoa.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_itoa.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_itoa.c.i
 .PHONY : src/libft/ft_itoa.c.i
 
 src/libft/ft_itoa.s: src/libft/ft_itoa.c.s
@@ -498,7 +471,7 @@ src/libft/ft_itoa.s: src/libft/ft_itoa.c.s
 
 # target to generate assembly for a file
 src/libft/ft_itoa.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_itoa.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_itoa.c.s
 .PHONY : src/libft/ft_itoa.c.s
 
 src/libft/ft_lstadd.o: src/libft/ft_lstadd.c.o
@@ -507,7 +480,7 @@ src/libft/ft_lstadd.o: src/libft/ft_lstadd.c.o
 
 # target to build an object file
 src/libft/ft_lstadd.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstadd.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstadd.c.o
 .PHONY : src/libft/ft_lstadd.c.o
 
 src/libft/ft_lstadd.i: src/libft/ft_lstadd.c.i
@@ -516,7 +489,7 @@ src/libft/ft_lstadd.i: src/libft/ft_lstadd.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstadd.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstadd.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstadd.c.i
 .PHONY : src/libft/ft_lstadd.c.i
 
 src/libft/ft_lstadd.s: src/libft/ft_lstadd.c.s
@@ -525,7 +498,7 @@ src/libft/ft_lstadd.s: src/libft/ft_lstadd.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstadd.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstadd.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstadd.c.s
 .PHONY : src/libft/ft_lstadd.c.s
 
 src/libft/ft_lstaddback.o: src/libft/ft_lstaddback.c.o
@@ -534,7 +507,7 @@ src/libft/ft_lstaddback.o: src/libft/ft_lstaddback.c.o
 
 # target to build an object file
 src/libft/ft_lstaddback.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstaddback.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstaddback.c.o
 .PHONY : src/libft/ft_lstaddback.c.o
 
 src/libft/ft_lstaddback.i: src/libft/ft_lstaddback.c.i
@@ -543,7 +516,7 @@ src/libft/ft_lstaddback.i: src/libft/ft_lstaddback.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstaddback.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstaddback.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstaddback.c.i
 .PHONY : src/libft/ft_lstaddback.c.i
 
 src/libft/ft_lstaddback.s: src/libft/ft_lstaddback.c.s
@@ -552,7 +525,7 @@ src/libft/ft_lstaddback.s: src/libft/ft_lstaddback.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstaddback.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstaddback.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstaddback.c.s
 .PHONY : src/libft/ft_lstaddback.c.s
 
 src/libft/ft_lstdel.o: src/libft/ft_lstdel.c.o
@@ -561,7 +534,7 @@ src/libft/ft_lstdel.o: src/libft/ft_lstdel.c.o
 
 # target to build an object file
 src/libft/ft_lstdel.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdel.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdel.c.o
 .PHONY : src/libft/ft_lstdel.c.o
 
 src/libft/ft_lstdel.i: src/libft/ft_lstdel.c.i
@@ -570,7 +543,7 @@ src/libft/ft_lstdel.i: src/libft/ft_lstdel.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstdel.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdel.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdel.c.i
 .PHONY : src/libft/ft_lstdel.c.i
 
 src/libft/ft_lstdel.s: src/libft/ft_lstdel.c.s
@@ -579,7 +552,7 @@ src/libft/ft_lstdel.s: src/libft/ft_lstdel.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstdel.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdel.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdel.c.s
 .PHONY : src/libft/ft_lstdel.c.s
 
 src/libft/ft_lstdelone.o: src/libft/ft_lstdelone.c.o
@@ -588,7 +561,7 @@ src/libft/ft_lstdelone.o: src/libft/ft_lstdelone.c.o
 
 # target to build an object file
 src/libft/ft_lstdelone.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdelone.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdelone.c.o
 .PHONY : src/libft/ft_lstdelone.c.o
 
 src/libft/ft_lstdelone.i: src/libft/ft_lstdelone.c.i
@@ -597,7 +570,7 @@ src/libft/ft_lstdelone.i: src/libft/ft_lstdelone.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstdelone.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdelone.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdelone.c.i
 .PHONY : src/libft/ft_lstdelone.c.i
 
 src/libft/ft_lstdelone.s: src/libft/ft_lstdelone.c.s
@@ -606,7 +579,7 @@ src/libft/ft_lstdelone.s: src/libft/ft_lstdelone.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstdelone.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstdelone.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstdelone.c.s
 .PHONY : src/libft/ft_lstdelone.c.s
 
 src/libft/ft_lstiter.o: src/libft/ft_lstiter.c.o
@@ -615,7 +588,7 @@ src/libft/ft_lstiter.o: src/libft/ft_lstiter.c.o
 
 # target to build an object file
 src/libft/ft_lstiter.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstiter.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstiter.c.o
 .PHONY : src/libft/ft_lstiter.c.o
 
 src/libft/ft_lstiter.i: src/libft/ft_lstiter.c.i
@@ -624,7 +597,7 @@ src/libft/ft_lstiter.i: src/libft/ft_lstiter.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstiter.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstiter.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstiter.c.i
 .PHONY : src/libft/ft_lstiter.c.i
 
 src/libft/ft_lstiter.s: src/libft/ft_lstiter.c.s
@@ -633,7 +606,7 @@ src/libft/ft_lstiter.s: src/libft/ft_lstiter.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstiter.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstiter.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstiter.c.s
 .PHONY : src/libft/ft_lstiter.c.s
 
 src/libft/ft_lstmap.o: src/libft/ft_lstmap.c.o
@@ -642,7 +615,7 @@ src/libft/ft_lstmap.o: src/libft/ft_lstmap.c.o
 
 # target to build an object file
 src/libft/ft_lstmap.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstmap.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstmap.c.o
 .PHONY : src/libft/ft_lstmap.c.o
 
 src/libft/ft_lstmap.i: src/libft/ft_lstmap.c.i
@@ -651,7 +624,7 @@ src/libft/ft_lstmap.i: src/libft/ft_lstmap.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstmap.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstmap.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstmap.c.i
 .PHONY : src/libft/ft_lstmap.c.i
 
 src/libft/ft_lstmap.s: src/libft/ft_lstmap.c.s
@@ -660,7 +633,7 @@ src/libft/ft_lstmap.s: src/libft/ft_lstmap.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstmap.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstmap.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstmap.c.s
 .PHONY : src/libft/ft_lstmap.c.s
 
 src/libft/ft_lstnew.o: src/libft/ft_lstnew.c.o
@@ -669,7 +642,7 @@ src/libft/ft_lstnew.o: src/libft/ft_lstnew.c.o
 
 # target to build an object file
 src/libft/ft_lstnew.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstnew.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstnew.c.o
 .PHONY : src/libft/ft_lstnew.c.o
 
 src/libft/ft_lstnew.i: src/libft/ft_lstnew.c.i
@@ -678,7 +651,7 @@ src/libft/ft_lstnew.i: src/libft/ft_lstnew.c.i
 
 # target to preprocess a source file
 src/libft/ft_lstnew.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstnew.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstnew.c.i
 .PHONY : src/libft/ft_lstnew.c.i
 
 src/libft/ft_lstnew.s: src/libft/ft_lstnew.c.s
@@ -687,7 +660,7 @@ src/libft/ft_lstnew.s: src/libft/ft_lstnew.c.s
 
 # target to generate assembly for a file
 src/libft/ft_lstnew.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_lstnew.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_lstnew.c.s
 .PHONY : src/libft/ft_lstnew.c.s
 
 src/libft/ft_memalloc.o: src/libft/ft_memalloc.c.o
@@ -696,7 +669,7 @@ src/libft/ft_memalloc.o: src/libft/ft_memalloc.c.o
 
 # target to build an object file
 src/libft/ft_memalloc.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memalloc.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memalloc.c.o
 .PHONY : src/libft/ft_memalloc.c.o
 
 src/libft/ft_memalloc.i: src/libft/ft_memalloc.c.i
@@ -705,7 +678,7 @@ src/libft/ft_memalloc.i: src/libft/ft_memalloc.c.i
 
 # target to preprocess a source file
 src/libft/ft_memalloc.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memalloc.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memalloc.c.i
 .PHONY : src/libft/ft_memalloc.c.i
 
 src/libft/ft_memalloc.s: src/libft/ft_memalloc.c.s
@@ -714,7 +687,7 @@ src/libft/ft_memalloc.s: src/libft/ft_memalloc.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memalloc.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memalloc.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memalloc.c.s
 .PHONY : src/libft/ft_memalloc.c.s
 
 src/libft/ft_memccpy.o: src/libft/ft_memccpy.c.o
@@ -723,7 +696,7 @@ src/libft/ft_memccpy.o: src/libft/ft_memccpy.c.o
 
 # target to build an object file
 src/libft/ft_memccpy.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memccpy.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memccpy.c.o
 .PHONY : src/libft/ft_memccpy.c.o
 
 src/libft/ft_memccpy.i: src/libft/ft_memccpy.c.i
@@ -732,7 +705,7 @@ src/libft/ft_memccpy.i: src/libft/ft_memccpy.c.i
 
 # target to preprocess a source file
 src/libft/ft_memccpy.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memccpy.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memccpy.c.i
 .PHONY : src/libft/ft_memccpy.c.i
 
 src/libft/ft_memccpy.s: src/libft/ft_memccpy.c.s
@@ -741,7 +714,7 @@ src/libft/ft_memccpy.s: src/libft/ft_memccpy.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memccpy.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memccpy.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memccpy.c.s
 .PHONY : src/libft/ft_memccpy.c.s
 
 src/libft/ft_memchr.o: src/libft/ft_memchr.c.o
@@ -750,7 +723,7 @@ src/libft/ft_memchr.o: src/libft/ft_memchr.c.o
 
 # target to build an object file
 src/libft/ft_memchr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memchr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memchr.c.o
 .PHONY : src/libft/ft_memchr.c.o
 
 src/libft/ft_memchr.i: src/libft/ft_memchr.c.i
@@ -759,7 +732,7 @@ src/libft/ft_memchr.i: src/libft/ft_memchr.c.i
 
 # target to preprocess a source file
 src/libft/ft_memchr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memchr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memchr.c.i
 .PHONY : src/libft/ft_memchr.c.i
 
 src/libft/ft_memchr.s: src/libft/ft_memchr.c.s
@@ -768,7 +741,7 @@ src/libft/ft_memchr.s: src/libft/ft_memchr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memchr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memchr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memchr.c.s
 .PHONY : src/libft/ft_memchr.c.s
 
 src/libft/ft_memcmp.o: src/libft/ft_memcmp.c.o
@@ -777,7 +750,7 @@ src/libft/ft_memcmp.o: src/libft/ft_memcmp.c.o
 
 # target to build an object file
 src/libft/ft_memcmp.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcmp.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcmp.c.o
 .PHONY : src/libft/ft_memcmp.c.o
 
 src/libft/ft_memcmp.i: src/libft/ft_memcmp.c.i
@@ -786,7 +759,7 @@ src/libft/ft_memcmp.i: src/libft/ft_memcmp.c.i
 
 # target to preprocess a source file
 src/libft/ft_memcmp.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcmp.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcmp.c.i
 .PHONY : src/libft/ft_memcmp.c.i
 
 src/libft/ft_memcmp.s: src/libft/ft_memcmp.c.s
@@ -795,7 +768,7 @@ src/libft/ft_memcmp.s: src/libft/ft_memcmp.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memcmp.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcmp.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcmp.c.s
 .PHONY : src/libft/ft_memcmp.c.s
 
 src/libft/ft_memcpy.o: src/libft/ft_memcpy.c.o
@@ -804,7 +777,7 @@ src/libft/ft_memcpy.o: src/libft/ft_memcpy.c.o
 
 # target to build an object file
 src/libft/ft_memcpy.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcpy.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcpy.c.o
 .PHONY : src/libft/ft_memcpy.c.o
 
 src/libft/ft_memcpy.i: src/libft/ft_memcpy.c.i
@@ -813,7 +786,7 @@ src/libft/ft_memcpy.i: src/libft/ft_memcpy.c.i
 
 # target to preprocess a source file
 src/libft/ft_memcpy.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcpy.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcpy.c.i
 .PHONY : src/libft/ft_memcpy.c.i
 
 src/libft/ft_memcpy.s: src/libft/ft_memcpy.c.s
@@ -822,7 +795,7 @@ src/libft/ft_memcpy.s: src/libft/ft_memcpy.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memcpy.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memcpy.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memcpy.c.s
 .PHONY : src/libft/ft_memcpy.c.s
 
 src/libft/ft_memdel.o: src/libft/ft_memdel.c.o
@@ -831,7 +804,7 @@ src/libft/ft_memdel.o: src/libft/ft_memdel.c.o
 
 # target to build an object file
 src/libft/ft_memdel.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memdel.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memdel.c.o
 .PHONY : src/libft/ft_memdel.c.o
 
 src/libft/ft_memdel.i: src/libft/ft_memdel.c.i
@@ -840,7 +813,7 @@ src/libft/ft_memdel.i: src/libft/ft_memdel.c.i
 
 # target to preprocess a source file
 src/libft/ft_memdel.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memdel.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memdel.c.i
 .PHONY : src/libft/ft_memdel.c.i
 
 src/libft/ft_memdel.s: src/libft/ft_memdel.c.s
@@ -849,7 +822,7 @@ src/libft/ft_memdel.s: src/libft/ft_memdel.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memdel.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memdel.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memdel.c.s
 .PHONY : src/libft/ft_memdel.c.s
 
 src/libft/ft_memmove.o: src/libft/ft_memmove.c.o
@@ -858,7 +831,7 @@ src/libft/ft_memmove.o: src/libft/ft_memmove.c.o
 
 # target to build an object file
 src/libft/ft_memmove.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memmove.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memmove.c.o
 .PHONY : src/libft/ft_memmove.c.o
 
 src/libft/ft_memmove.i: src/libft/ft_memmove.c.i
@@ -867,7 +840,7 @@ src/libft/ft_memmove.i: src/libft/ft_memmove.c.i
 
 # target to preprocess a source file
 src/libft/ft_memmove.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memmove.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memmove.c.i
 .PHONY : src/libft/ft_memmove.c.i
 
 src/libft/ft_memmove.s: src/libft/ft_memmove.c.s
@@ -876,7 +849,7 @@ src/libft/ft_memmove.s: src/libft/ft_memmove.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memmove.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memmove.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memmove.c.s
 .PHONY : src/libft/ft_memmove.c.s
 
 src/libft/ft_memset.o: src/libft/ft_memset.c.o
@@ -885,7 +858,7 @@ src/libft/ft_memset.o: src/libft/ft_memset.c.o
 
 # target to build an object file
 src/libft/ft_memset.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memset.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memset.c.o
 .PHONY : src/libft/ft_memset.c.o
 
 src/libft/ft_memset.i: src/libft/ft_memset.c.i
@@ -894,7 +867,7 @@ src/libft/ft_memset.i: src/libft/ft_memset.c.i
 
 # target to preprocess a source file
 src/libft/ft_memset.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memset.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memset.c.i
 .PHONY : src/libft/ft_memset.c.i
 
 src/libft/ft_memset.s: src/libft/ft_memset.c.s
@@ -903,7 +876,7 @@ src/libft/ft_memset.s: src/libft/ft_memset.c.s
 
 # target to generate assembly for a file
 src/libft/ft_memset.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_memset.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_memset.c.s
 .PHONY : src/libft/ft_memset.c.s
 
 src/libft/ft_power.o: src/libft/ft_power.c.o
@@ -912,7 +885,7 @@ src/libft/ft_power.o: src/libft/ft_power.c.o
 
 # target to build an object file
 src/libft/ft_power.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_power.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_power.c.o
 .PHONY : src/libft/ft_power.c.o
 
 src/libft/ft_power.i: src/libft/ft_power.c.i
@@ -921,7 +894,7 @@ src/libft/ft_power.i: src/libft/ft_power.c.i
 
 # target to preprocess a source file
 src/libft/ft_power.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_power.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_power.c.i
 .PHONY : src/libft/ft_power.c.i
 
 src/libft/ft_power.s: src/libft/ft_power.c.s
@@ -930,7 +903,7 @@ src/libft/ft_power.s: src/libft/ft_power.c.s
 
 # target to generate assembly for a file
 src/libft/ft_power.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_power.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_power.c.s
 .PHONY : src/libft/ft_power.c.s
 
 src/libft/ft_printf/extra_fun.o: src/libft/ft_printf/extra_fun.c.o
@@ -939,7 +912,7 @@ src/libft/ft_printf/extra_fun.o: src/libft/ft_printf/extra_fun.c.o
 
 # target to build an object file
 src/libft/ft_printf/extra_fun.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/extra_fun.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/extra_fun.c.o
 .PHONY : src/libft/ft_printf/extra_fun.c.o
 
 src/libft/ft_printf/extra_fun.i: src/libft/ft_printf/extra_fun.c.i
@@ -948,7 +921,7 @@ src/libft/ft_printf/extra_fun.i: src/libft/ft_printf/extra_fun.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/extra_fun.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/extra_fun.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/extra_fun.c.i
 .PHONY : src/libft/ft_printf/extra_fun.c.i
 
 src/libft/ft_printf/extra_fun.s: src/libft/ft_printf/extra_fun.c.s
@@ -957,7 +930,7 @@ src/libft/ft_printf/extra_fun.s: src/libft/ft_printf/extra_fun.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/extra_fun.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/extra_fun.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/extra_fun.c.s
 .PHONY : src/libft/ft_printf/extra_fun.c.s
 
 src/libft/ft_printf/find_flag.o: src/libft/ft_printf/find_flag.c.o
@@ -966,7 +939,7 @@ src/libft/ft_printf/find_flag.o: src/libft/ft_printf/find_flag.c.o
 
 # target to build an object file
 src/libft/ft_printf/find_flag.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/find_flag.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/find_flag.c.o
 .PHONY : src/libft/ft_printf/find_flag.c.o
 
 src/libft/ft_printf/find_flag.i: src/libft/ft_printf/find_flag.c.i
@@ -975,7 +948,7 @@ src/libft/ft_printf/find_flag.i: src/libft/ft_printf/find_flag.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/find_flag.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/find_flag.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/find_flag.c.i
 .PHONY : src/libft/ft_printf/find_flag.c.i
 
 src/libft/ft_printf/find_flag.s: src/libft/ft_printf/find_flag.c.s
@@ -984,7 +957,7 @@ src/libft/ft_printf/find_flag.s: src/libft/ft_printf/find_flag.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/find_flag.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/find_flag.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/find_flag.c.s
 .PHONY : src/libft/ft_printf/find_flag.c.s
 
 src/libft/ft_printf/for_add.o: src/libft/ft_printf/for_add.c.o
@@ -993,7 +966,7 @@ src/libft/ft_printf/for_add.o: src/libft/ft_printf/for_add.c.o
 
 # target to build an object file
 src/libft/ft_printf/for_add.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_add.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_add.c.o
 .PHONY : src/libft/ft_printf/for_add.c.o
 
 src/libft/ft_printf/for_add.i: src/libft/ft_printf/for_add.c.i
@@ -1002,7 +975,7 @@ src/libft/ft_printf/for_add.i: src/libft/ft_printf/for_add.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/for_add.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_add.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_add.c.i
 .PHONY : src/libft/ft_printf/for_add.c.i
 
 src/libft/ft_printf/for_add.s: src/libft/ft_printf/for_add.c.s
@@ -1011,7 +984,7 @@ src/libft/ft_printf/for_add.s: src/libft/ft_printf/for_add.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/for_add.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_add.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_add.c.s
 .PHONY : src/libft/ft_printf/for_add.c.s
 
 src/libft/ft_printf/for_flags.o: src/libft/ft_printf/for_flags.c.o
@@ -1020,7 +993,7 @@ src/libft/ft_printf/for_flags.o: src/libft/ft_printf/for_flags.c.o
 
 # target to build an object file
 src/libft/ft_printf/for_flags.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_flags.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_flags.c.o
 .PHONY : src/libft/ft_printf/for_flags.c.o
 
 src/libft/ft_printf/for_flags.i: src/libft/ft_printf/for_flags.c.i
@@ -1029,7 +1002,7 @@ src/libft/ft_printf/for_flags.i: src/libft/ft_printf/for_flags.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/for_flags.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_flags.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_flags.c.i
 .PHONY : src/libft/ft_printf/for_flags.c.i
 
 src/libft/ft_printf/for_flags.s: src/libft/ft_printf/for_flags.c.s
@@ -1038,7 +1011,7 @@ src/libft/ft_printf/for_flags.s: src/libft/ft_printf/for_flags.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/for_flags.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_flags.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_flags.c.s
 .PHONY : src/libft/ft_printf/for_flags.c.s
 
 src/libft/ft_printf/for_p.o: src/libft/ft_printf/for_p.c.o
@@ -1047,7 +1020,7 @@ src/libft/ft_printf/for_p.o: src/libft/ft_printf/for_p.c.o
 
 # target to build an object file
 src/libft/ft_printf/for_p.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_p.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_p.c.o
 .PHONY : src/libft/ft_printf/for_p.c.o
 
 src/libft/ft_printf/for_p.i: src/libft/ft_printf/for_p.c.i
@@ -1056,7 +1029,7 @@ src/libft/ft_printf/for_p.i: src/libft/ft_printf/for_p.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/for_p.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_p.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_p.c.i
 .PHONY : src/libft/ft_printf/for_p.c.i
 
 src/libft/ft_printf/for_p.s: src/libft/ft_printf/for_p.c.s
@@ -1065,7 +1038,7 @@ src/libft/ft_printf/for_p.s: src/libft/ft_printf/for_p.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/for_p.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/for_p.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/for_p.c.s
 .PHONY : src/libft/ft_printf/for_p.c.s
 
 src/libft/ft_printf/ft_itoa_base.o: src/libft/ft_printf/ft_itoa_base.c.o
@@ -1074,7 +1047,7 @@ src/libft/ft_printf/ft_itoa_base.o: src/libft/ft_printf/ft_itoa_base.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_itoa_base.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base.c.o
 .PHONY : src/libft/ft_printf/ft_itoa_base.c.o
 
 src/libft/ft_printf/ft_itoa_base.i: src/libft/ft_printf/ft_itoa_base.c.i
@@ -1083,7 +1056,7 @@ src/libft/ft_printf/ft_itoa_base.i: src/libft/ft_printf/ft_itoa_base.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_itoa_base.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base.c.i
 .PHONY : src/libft/ft_printf/ft_itoa_base.c.i
 
 src/libft/ft_printf/ft_itoa_base.s: src/libft/ft_printf/ft_itoa_base.c.s
@@ -1092,7 +1065,7 @@ src/libft/ft_printf/ft_itoa_base.s: src/libft/ft_printf/ft_itoa_base.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_itoa_base.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base.c.s
 .PHONY : src/libft/ft_printf/ft_itoa_base.c.s
 
 src/libft/ft_printf/ft_itoa_base_int.o: src/libft/ft_printf/ft_itoa_base_int.c.o
@@ -1101,7 +1074,7 @@ src/libft/ft_printf/ft_itoa_base_int.o: src/libft/ft_printf/ft_itoa_base_int.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_itoa_base_int.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base_int.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base_int.c.o
 .PHONY : src/libft/ft_printf/ft_itoa_base_int.c.o
 
 src/libft/ft_printf/ft_itoa_base_int.i: src/libft/ft_printf/ft_itoa_base_int.c.i
@@ -1110,7 +1083,7 @@ src/libft/ft_printf/ft_itoa_base_int.i: src/libft/ft_printf/ft_itoa_base_int.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_itoa_base_int.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base_int.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base_int.c.i
 .PHONY : src/libft/ft_printf/ft_itoa_base_int.c.i
 
 src/libft/ft_printf/ft_itoa_base_int.s: src/libft/ft_printf/ft_itoa_base_int.c.s
@@ -1119,7 +1092,7 @@ src/libft/ft_printf/ft_itoa_base_int.s: src/libft/ft_printf/ft_itoa_base_int.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_itoa_base_int.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_base_int.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_base_int.c.s
 .PHONY : src/libft/ft_printf/ft_itoa_base_int.c.s
 
 src/libft/ft_printf/ft_itoa_max.o: src/libft/ft_printf/ft_itoa_max.c.o
@@ -1128,7 +1101,7 @@ src/libft/ft_printf/ft_itoa_max.o: src/libft/ft_printf/ft_itoa_max.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_itoa_max.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_max.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_max.c.o
 .PHONY : src/libft/ft_printf/ft_itoa_max.c.o
 
 src/libft/ft_printf/ft_itoa_max.i: src/libft/ft_printf/ft_itoa_max.c.i
@@ -1137,7 +1110,7 @@ src/libft/ft_printf/ft_itoa_max.i: src/libft/ft_printf/ft_itoa_max.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_itoa_max.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_max.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_max.c.i
 .PHONY : src/libft/ft_printf/ft_itoa_max.c.i
 
 src/libft/ft_printf/ft_itoa_max.s: src/libft/ft_printf/ft_itoa_max.c.s
@@ -1146,7 +1119,7 @@ src/libft/ft_printf/ft_itoa_max.s: src/libft/ft_printf/ft_itoa_max.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_itoa_max.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_max.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_max.c.s
 .PHONY : src/libft/ft_printf/ft_itoa_max.c.s
 
 src/libft/ft_printf/ft_itoa_unslong.o: src/libft/ft_printf/ft_itoa_unslong.c.o
@@ -1155,7 +1128,7 @@ src/libft/ft_printf/ft_itoa_unslong.o: src/libft/ft_printf/ft_itoa_unslong.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_itoa_unslong.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_unslong.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_unslong.c.o
 .PHONY : src/libft/ft_printf/ft_itoa_unslong.c.o
 
 src/libft/ft_printf/ft_itoa_unslong.i: src/libft/ft_printf/ft_itoa_unslong.c.i
@@ -1164,7 +1137,7 @@ src/libft/ft_printf/ft_itoa_unslong.i: src/libft/ft_printf/ft_itoa_unslong.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_itoa_unslong.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_unslong.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_unslong.c.i
 .PHONY : src/libft/ft_printf/ft_itoa_unslong.c.i
 
 src/libft/ft_printf/ft_itoa_unslong.s: src/libft/ft_printf/ft_itoa_unslong.c.s
@@ -1173,7 +1146,7 @@ src/libft/ft_printf/ft_itoa_unslong.s: src/libft/ft_printf/ft_itoa_unslong.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_itoa_unslong.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_itoa_unslong.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_itoa_unslong.c.s
 .PHONY : src/libft/ft_printf/ft_itoa_unslong.c.s
 
 src/libft/ft_printf/ft_memcpy.o: src/libft/ft_printf/ft_memcpy.c.o
@@ -1182,7 +1155,7 @@ src/libft/ft_printf/ft_memcpy.o: src/libft/ft_printf/ft_memcpy.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_memcpy.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_memcpy.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_memcpy.c.o
 .PHONY : src/libft/ft_printf/ft_memcpy.c.o
 
 src/libft/ft_printf/ft_memcpy.i: src/libft/ft_printf/ft_memcpy.c.i
@@ -1191,7 +1164,7 @@ src/libft/ft_printf/ft_memcpy.i: src/libft/ft_printf/ft_memcpy.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_memcpy.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_memcpy.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_memcpy.c.i
 .PHONY : src/libft/ft_printf/ft_memcpy.c.i
 
 src/libft/ft_printf/ft_memcpy.s: src/libft/ft_printf/ft_memcpy.c.s
@@ -1200,7 +1173,7 @@ src/libft/ft_printf/ft_memcpy.s: src/libft/ft_printf/ft_memcpy.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_memcpy.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_memcpy.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_memcpy.c.s
 .PHONY : src/libft/ft_printf/ft_memcpy.c.s
 
 src/libft/ft_printf/ft_printf.o: src/libft/ft_printf/ft_printf.c.o
@@ -1209,7 +1182,7 @@ src/libft/ft_printf/ft_printf.o: src/libft/ft_printf/ft_printf.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_printf.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_printf.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_printf.c.o
 .PHONY : src/libft/ft_printf/ft_printf.c.o
 
 src/libft/ft_printf/ft_printf.i: src/libft/ft_printf/ft_printf.c.i
@@ -1218,7 +1191,7 @@ src/libft/ft_printf/ft_printf.i: src/libft/ft_printf/ft_printf.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_printf.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_printf.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_printf.c.i
 .PHONY : src/libft/ft_printf/ft_printf.c.i
 
 src/libft/ft_printf/ft_printf.s: src/libft/ft_printf/ft_printf.c.s
@@ -1227,7 +1200,7 @@ src/libft/ft_printf/ft_printf.s: src/libft/ft_printf/ft_printf.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_printf.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_printf.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_printf.c.s
 .PHONY : src/libft/ft_printf/ft_printf.c.s
 
 src/libft/ft_printf/ft_putchar.o: src/libft/ft_printf/ft_putchar.c.o
@@ -1236,7 +1209,7 @@ src/libft/ft_printf/ft_putchar.o: src/libft/ft_printf/ft_putchar.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putchar.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putchar.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putchar.c.o
 .PHONY : src/libft/ft_printf/ft_putchar.c.o
 
 src/libft/ft_printf/ft_putchar.i: src/libft/ft_printf/ft_putchar.c.i
@@ -1245,7 +1218,7 @@ src/libft/ft_printf/ft_putchar.i: src/libft/ft_printf/ft_putchar.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putchar.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putchar.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putchar.c.i
 .PHONY : src/libft/ft_printf/ft_putchar.c.i
 
 src/libft/ft_printf/ft_putchar.s: src/libft/ft_printf/ft_putchar.c.s
@@ -1254,7 +1227,7 @@ src/libft/ft_printf/ft_putchar.s: src/libft/ft_printf/ft_putchar.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putchar.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putchar.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putchar.c.s
 .PHONY : src/libft/ft_printf/ft_putchar.c.s
 
 src/libft/ft_printf/ft_putint.o: src/libft/ft_printf/ft_putint.c.o
@@ -1263,7 +1236,7 @@ src/libft/ft_printf/ft_putint.o: src/libft/ft_printf/ft_putint.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putint.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putint.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putint.c.o
 .PHONY : src/libft/ft_printf/ft_putint.c.o
 
 src/libft/ft_printf/ft_putint.i: src/libft/ft_printf/ft_putint.c.i
@@ -1272,7 +1245,7 @@ src/libft/ft_printf/ft_putint.i: src/libft/ft_printf/ft_putint.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putint.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putint.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putint.c.i
 .PHONY : src/libft/ft_printf/ft_putint.c.i
 
 src/libft/ft_printf/ft_putint.s: src/libft/ft_printf/ft_putint.c.s
@@ -1281,7 +1254,7 @@ src/libft/ft_printf/ft_putint.s: src/libft/ft_printf/ft_putint.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putint.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putint.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putint.c.s
 .PHONY : src/libft/ft_printf/ft_putint.c.s
 
 src/libft/ft_printf/ft_putnbr.o: src/libft/ft_printf/ft_putnbr.c.o
@@ -1290,7 +1263,7 @@ src/libft/ft_printf/ft_putnbr.o: src/libft/ft_printf/ft_putnbr.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putnbr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnbr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnbr.c.o
 .PHONY : src/libft/ft_printf/ft_putnbr.c.o
 
 src/libft/ft_printf/ft_putnbr.i: src/libft/ft_printf/ft_putnbr.c.i
@@ -1299,7 +1272,7 @@ src/libft/ft_printf/ft_putnbr.i: src/libft/ft_printf/ft_putnbr.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putnbr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnbr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnbr.c.i
 .PHONY : src/libft/ft_printf/ft_putnbr.c.i
 
 src/libft/ft_printf/ft_putnbr.s: src/libft/ft_printf/ft_putnbr.c.s
@@ -1308,7 +1281,7 @@ src/libft/ft_printf/ft_putnbr.s: src/libft/ft_printf/ft_putnbr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putnbr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnbr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnbr.c.s
 .PHONY : src/libft/ft_printf/ft_putnbr.c.s
 
 src/libft/ft_printf/ft_putnumber.o: src/libft/ft_printf/ft_putnumber.c.o
@@ -1317,7 +1290,7 @@ src/libft/ft_printf/ft_putnumber.o: src/libft/ft_printf/ft_putnumber.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putnumber.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnumber.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnumber.c.o
 .PHONY : src/libft/ft_printf/ft_putnumber.c.o
 
 src/libft/ft_printf/ft_putnumber.i: src/libft/ft_printf/ft_putnumber.c.i
@@ -1326,7 +1299,7 @@ src/libft/ft_printf/ft_putnumber.i: src/libft/ft_printf/ft_putnumber.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putnumber.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnumber.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnumber.c.i
 .PHONY : src/libft/ft_printf/ft_putnumber.c.i
 
 src/libft/ft_printf/ft_putnumber.s: src/libft/ft_printf/ft_putnumber.c.s
@@ -1335,7 +1308,7 @@ src/libft/ft_printf/ft_putnumber.s: src/libft/ft_printf/ft_putnumber.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putnumber.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putnumber.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putnumber.c.s
 .PHONY : src/libft/ft_printf/ft_putnumber.c.s
 
 src/libft/ft_printf/ft_putstr.o: src/libft/ft_printf/ft_putstr.c.o
@@ -1344,7 +1317,7 @@ src/libft/ft_printf/ft_putstr.o: src/libft/ft_printf/ft_putstr.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putstr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstr.c.o
 .PHONY : src/libft/ft_printf/ft_putstr.c.o
 
 src/libft/ft_printf/ft_putstr.i: src/libft/ft_printf/ft_putstr.c.i
@@ -1353,7 +1326,7 @@ src/libft/ft_printf/ft_putstr.i: src/libft/ft_printf/ft_putstr.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putstr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstr.c.i
 .PHONY : src/libft/ft_printf/ft_putstr.c.i
 
 src/libft/ft_printf/ft_putstr.s: src/libft/ft_printf/ft_putstr.c.s
@@ -1362,7 +1335,7 @@ src/libft/ft_printf/ft_putstr.s: src/libft/ft_printf/ft_putstr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putstr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstr.c.s
 .PHONY : src/libft/ft_printf/ft_putstr.c.s
 
 src/libft/ft_printf/ft_putstring.o: src/libft/ft_printf/ft_putstring.c.o
@@ -1371,7 +1344,7 @@ src/libft/ft_printf/ft_putstring.o: src/libft/ft_printf/ft_putstring.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putstring.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstring.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstring.c.o
 .PHONY : src/libft/ft_printf/ft_putstring.c.o
 
 src/libft/ft_printf/ft_putstring.i: src/libft/ft_printf/ft_putstring.c.i
@@ -1380,7 +1353,7 @@ src/libft/ft_printf/ft_putstring.i: src/libft/ft_printf/ft_putstring.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putstring.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstring.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstring.c.i
 .PHONY : src/libft/ft_printf/ft_putstring.c.i
 
 src/libft/ft_printf/ft_putstring.s: src/libft/ft_printf/ft_putstring.c.s
@@ -1389,7 +1362,7 @@ src/libft/ft_printf/ft_putstring.s: src/libft/ft_printf/ft_putstring.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putstring.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putstring.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putstring.c.s
 .PHONY : src/libft/ft_printf/ft_putstring.c.s
 
 src/libft/ft_printf/ft_putunsnbr.o: src/libft/ft_printf/ft_putunsnbr.c.o
@@ -1398,7 +1371,7 @@ src/libft/ft_printf/ft_putunsnbr.o: src/libft/ft_printf/ft_putunsnbr.c.o
 
 # target to build an object file
 src/libft/ft_printf/ft_putunsnbr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putunsnbr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putunsnbr.c.o
 .PHONY : src/libft/ft_printf/ft_putunsnbr.c.o
 
 src/libft/ft_printf/ft_putunsnbr.i: src/libft/ft_printf/ft_putunsnbr.c.i
@@ -1407,7 +1380,7 @@ src/libft/ft_printf/ft_putunsnbr.i: src/libft/ft_printf/ft_putunsnbr.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/ft_putunsnbr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putunsnbr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putunsnbr.c.i
 .PHONY : src/libft/ft_printf/ft_putunsnbr.c.i
 
 src/libft/ft_printf/ft_putunsnbr.s: src/libft/ft_printf/ft_putunsnbr.c.s
@@ -1416,7 +1389,7 @@ src/libft/ft_printf/ft_putunsnbr.s: src/libft/ft_printf/ft_putunsnbr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/ft_putunsnbr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/ft_putunsnbr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/ft_putunsnbr.c.s
 .PHONY : src/libft/ft_printf/ft_putunsnbr.c.s
 
 src/libft/ft_printf/if_flags.o: src/libft/ft_printf/if_flags.c.o
@@ -1425,7 +1398,7 @@ src/libft/ft_printf/if_flags.o: src/libft/ft_printf/if_flags.c.o
 
 # target to build an object file
 src/libft/ft_printf/if_flags.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags.c.o
 .PHONY : src/libft/ft_printf/if_flags.c.o
 
 src/libft/ft_printf/if_flags.i: src/libft/ft_printf/if_flags.c.i
@@ -1434,7 +1407,7 @@ src/libft/ft_printf/if_flags.i: src/libft/ft_printf/if_flags.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/if_flags.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags.c.i
 .PHONY : src/libft/ft_printf/if_flags.c.i
 
 src/libft/ft_printf/if_flags.s: src/libft/ft_printf/if_flags.c.s
@@ -1443,7 +1416,7 @@ src/libft/ft_printf/if_flags.s: src/libft/ft_printf/if_flags.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/if_flags.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags.c.s
 .PHONY : src/libft/ft_printf/if_flags.c.s
 
 src/libft/ft_printf/if_flags_d.o: src/libft/ft_printf/if_flags_d.c.o
@@ -1452,7 +1425,7 @@ src/libft/ft_printf/if_flags_d.o: src/libft/ft_printf/if_flags_d.c.o
 
 # target to build an object file
 src/libft/ft_printf/if_flags_d.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_d.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_d.c.o
 .PHONY : src/libft/ft_printf/if_flags_d.c.o
 
 src/libft/ft_printf/if_flags_d.i: src/libft/ft_printf/if_flags_d.c.i
@@ -1461,7 +1434,7 @@ src/libft/ft_printf/if_flags_d.i: src/libft/ft_printf/if_flags_d.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/if_flags_d.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_d.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_d.c.i
 .PHONY : src/libft/ft_printf/if_flags_d.c.i
 
 src/libft/ft_printf/if_flags_d.s: src/libft/ft_printf/if_flags_d.c.s
@@ -1470,7 +1443,7 @@ src/libft/ft_printf/if_flags_d.s: src/libft/ft_printf/if_flags_d.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/if_flags_d.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_d.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_d.c.s
 .PHONY : src/libft/ft_printf/if_flags_d.c.s
 
 src/libft/ft_printf/if_flags_ito.o: src/libft/ft_printf/if_flags_ito.c.o
@@ -1479,7 +1452,7 @@ src/libft/ft_printf/if_flags_ito.o: src/libft/ft_printf/if_flags_ito.c.o
 
 # target to build an object file
 src/libft/ft_printf/if_flags_ito.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_ito.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_ito.c.o
 .PHONY : src/libft/ft_printf/if_flags_ito.c.o
 
 src/libft/ft_printf/if_flags_ito.i: src/libft/ft_printf/if_flags_ito.c.i
@@ -1488,7 +1461,7 @@ src/libft/ft_printf/if_flags_ito.i: src/libft/ft_printf/if_flags_ito.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/if_flags_ito.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_ito.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_ito.c.i
 .PHONY : src/libft/ft_printf/if_flags_ito.c.i
 
 src/libft/ft_printf/if_flags_ito.s: src/libft/ft_printf/if_flags_ito.c.s
@@ -1497,7 +1470,7 @@ src/libft/ft_printf/if_flags_ito.s: src/libft/ft_printf/if_flags_ito.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/if_flags_ito.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/if_flags_ito.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/if_flags_ito.c.s
 .PHONY : src/libft/ft_printf/if_flags_ito.c.s
 
 src/libft/ft_printf/not_spec.o: src/libft/ft_printf/not_spec.c.o
@@ -1506,7 +1479,7 @@ src/libft/ft_printf/not_spec.o: src/libft/ft_printf/not_spec.c.o
 
 # target to build an object file
 src/libft/ft_printf/not_spec.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/not_spec.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/not_spec.c.o
 .PHONY : src/libft/ft_printf/not_spec.c.o
 
 src/libft/ft_printf/not_spec.i: src/libft/ft_printf/not_spec.c.i
@@ -1515,7 +1488,7 @@ src/libft/ft_printf/not_spec.i: src/libft/ft_printf/not_spec.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/not_spec.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/not_spec.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/not_spec.c.i
 .PHONY : src/libft/ft_printf/not_spec.c.i
 
 src/libft/ft_printf/not_spec.s: src/libft/ft_printf/not_spec.c.s
@@ -1524,7 +1497,7 @@ src/libft/ft_printf/not_spec.s: src/libft/ft_printf/not_spec.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/not_spec.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/not_spec.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/not_spec.c.s
 .PHONY : src/libft/ft_printf/not_spec.c.s
 
 src/libft/ft_printf/number.o: src/libft/ft_printf/number.c.o
@@ -1533,7 +1506,7 @@ src/libft/ft_printf/number.o: src/libft/ft_printf/number.c.o
 
 # target to build an object file
 src/libft/ft_printf/number.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/number.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/number.c.o
 .PHONY : src/libft/ft_printf/number.c.o
 
 src/libft/ft_printf/number.i: src/libft/ft_printf/number.c.i
@@ -1542,7 +1515,7 @@ src/libft/ft_printf/number.i: src/libft/ft_printf/number.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/number.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/number.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/number.c.i
 .PHONY : src/libft/ft_printf/number.c.i
 
 src/libft/ft_printf/number.s: src/libft/ft_printf/number.c.s
@@ -1551,7 +1524,7 @@ src/libft/ft_printf/number.s: src/libft/ft_printf/number.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/number.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/number.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/number.c.s
 .PHONY : src/libft/ft_printf/number.c.s
 
 src/libft/ft_printf/specifier.o: src/libft/ft_printf/specifier.c.o
@@ -1560,7 +1533,7 @@ src/libft/ft_printf/specifier.o: src/libft/ft_printf/specifier.c.o
 
 # target to build an object file
 src/libft/ft_printf/specifier.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/specifier.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/specifier.c.o
 .PHONY : src/libft/ft_printf/specifier.c.o
 
 src/libft/ft_printf/specifier.i: src/libft/ft_printf/specifier.c.i
@@ -1569,7 +1542,7 @@ src/libft/ft_printf/specifier.i: src/libft/ft_printf/specifier.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/specifier.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/specifier.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/specifier.c.i
 .PHONY : src/libft/ft_printf/specifier.c.i
 
 src/libft/ft_printf/specifier.s: src/libft/ft_printf/specifier.c.s
@@ -1578,7 +1551,7 @@ src/libft/ft_printf/specifier.s: src/libft/ft_printf/specifier.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/specifier.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/specifier.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/specifier.c.s
 .PHONY : src/libft/ft_printf/specifier.c.s
 
 src/libft/ft_printf/unicode.o: src/libft/ft_printf/unicode.c.o
@@ -1587,7 +1560,7 @@ src/libft/ft_printf/unicode.o: src/libft/ft_printf/unicode.c.o
 
 # target to build an object file
 src/libft/ft_printf/unicode.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/unicode.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/unicode.c.o
 .PHONY : src/libft/ft_printf/unicode.c.o
 
 src/libft/ft_printf/unicode.i: src/libft/ft_printf/unicode.c.i
@@ -1596,7 +1569,7 @@ src/libft/ft_printf/unicode.i: src/libft/ft_printf/unicode.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/unicode.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/unicode.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/unicode.c.i
 .PHONY : src/libft/ft_printf/unicode.c.i
 
 src/libft/ft_printf/unicode.s: src/libft/ft_printf/unicode.c.s
@@ -1605,7 +1578,7 @@ src/libft/ft_printf/unicode.s: src/libft/ft_printf/unicode.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/unicode.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/unicode.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/unicode.c.s
 .PHONY : src/libft/ft_printf/unicode.c.s
 
 src/libft/ft_printf/valid.o: src/libft/ft_printf/valid.c.o
@@ -1614,7 +1587,7 @@ src/libft/ft_printf/valid.o: src/libft/ft_printf/valid.c.o
 
 # target to build an object file
 src/libft/ft_printf/valid.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/valid.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/valid.c.o
 .PHONY : src/libft/ft_printf/valid.c.o
 
 src/libft/ft_printf/valid.i: src/libft/ft_printf/valid.c.i
@@ -1623,7 +1596,7 @@ src/libft/ft_printf/valid.i: src/libft/ft_printf/valid.c.i
 
 # target to preprocess a source file
 src/libft/ft_printf/valid.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/valid.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/valid.c.i
 .PHONY : src/libft/ft_printf/valid.c.i
 
 src/libft/ft_printf/valid.s: src/libft/ft_printf/valid.c.s
@@ -1632,7 +1605,7 @@ src/libft/ft_printf/valid.s: src/libft/ft_printf/valid.c.s
 
 # target to generate assembly for a file
 src/libft/ft_printf/valid.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_printf/valid.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_printf/valid.c.s
 .PHONY : src/libft/ft_printf/valid.c.s
 
 src/libft/ft_putchar.o: src/libft/ft_putchar.c.o
@@ -1641,7 +1614,7 @@ src/libft/ft_putchar.o: src/libft/ft_putchar.c.o
 
 # target to build an object file
 src/libft/ft_putchar.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar.c.o
 .PHONY : src/libft/ft_putchar.c.o
 
 src/libft/ft_putchar.i: src/libft/ft_putchar.c.i
@@ -1650,7 +1623,7 @@ src/libft/ft_putchar.i: src/libft/ft_putchar.c.i
 
 # target to preprocess a source file
 src/libft/ft_putchar.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar.c.i
 .PHONY : src/libft/ft_putchar.c.i
 
 src/libft/ft_putchar.s: src/libft/ft_putchar.c.s
@@ -1659,7 +1632,7 @@ src/libft/ft_putchar.s: src/libft/ft_putchar.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putchar.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar.c.s
 .PHONY : src/libft/ft_putchar.c.s
 
 src/libft/ft_putchar_fd.o: src/libft/ft_putchar_fd.c.o
@@ -1668,7 +1641,7 @@ src/libft/ft_putchar_fd.o: src/libft/ft_putchar_fd.c.o
 
 # target to build an object file
 src/libft/ft_putchar_fd.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar_fd.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar_fd.c.o
 .PHONY : src/libft/ft_putchar_fd.c.o
 
 src/libft/ft_putchar_fd.i: src/libft/ft_putchar_fd.c.i
@@ -1677,7 +1650,7 @@ src/libft/ft_putchar_fd.i: src/libft/ft_putchar_fd.c.i
 
 # target to preprocess a source file
 src/libft/ft_putchar_fd.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar_fd.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar_fd.c.i
 .PHONY : src/libft/ft_putchar_fd.c.i
 
 src/libft/ft_putchar_fd.s: src/libft/ft_putchar_fd.c.s
@@ -1686,7 +1659,7 @@ src/libft/ft_putchar_fd.s: src/libft/ft_putchar_fd.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putchar_fd.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putchar_fd.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putchar_fd.c.s
 .PHONY : src/libft/ft_putchar_fd.c.s
 
 src/libft/ft_putendl.o: src/libft/ft_putendl.c.o
@@ -1695,7 +1668,7 @@ src/libft/ft_putendl.o: src/libft/ft_putendl.c.o
 
 # target to build an object file
 src/libft/ft_putendl.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl.c.o
 .PHONY : src/libft/ft_putendl.c.o
 
 src/libft/ft_putendl.i: src/libft/ft_putendl.c.i
@@ -1704,7 +1677,7 @@ src/libft/ft_putendl.i: src/libft/ft_putendl.c.i
 
 # target to preprocess a source file
 src/libft/ft_putendl.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl.c.i
 .PHONY : src/libft/ft_putendl.c.i
 
 src/libft/ft_putendl.s: src/libft/ft_putendl.c.s
@@ -1713,7 +1686,7 @@ src/libft/ft_putendl.s: src/libft/ft_putendl.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putendl.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl.c.s
 .PHONY : src/libft/ft_putendl.c.s
 
 src/libft/ft_putendl_fd.o: src/libft/ft_putendl_fd.c.o
@@ -1722,7 +1695,7 @@ src/libft/ft_putendl_fd.o: src/libft/ft_putendl_fd.c.o
 
 # target to build an object file
 src/libft/ft_putendl_fd.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl_fd.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl_fd.c.o
 .PHONY : src/libft/ft_putendl_fd.c.o
 
 src/libft/ft_putendl_fd.i: src/libft/ft_putendl_fd.c.i
@@ -1731,7 +1704,7 @@ src/libft/ft_putendl_fd.i: src/libft/ft_putendl_fd.c.i
 
 # target to preprocess a source file
 src/libft/ft_putendl_fd.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl_fd.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl_fd.c.i
 .PHONY : src/libft/ft_putendl_fd.c.i
 
 src/libft/ft_putendl_fd.s: src/libft/ft_putendl_fd.c.s
@@ -1740,7 +1713,7 @@ src/libft/ft_putendl_fd.s: src/libft/ft_putendl_fd.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putendl_fd.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putendl_fd.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putendl_fd.c.s
 .PHONY : src/libft/ft_putendl_fd.c.s
 
 src/libft/ft_putnbr.o: src/libft/ft_putnbr.c.o
@@ -1749,7 +1722,7 @@ src/libft/ft_putnbr.o: src/libft/ft_putnbr.c.o
 
 # target to build an object file
 src/libft/ft_putnbr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr.c.o
 .PHONY : src/libft/ft_putnbr.c.o
 
 src/libft/ft_putnbr.i: src/libft/ft_putnbr.c.i
@@ -1758,7 +1731,7 @@ src/libft/ft_putnbr.i: src/libft/ft_putnbr.c.i
 
 # target to preprocess a source file
 src/libft/ft_putnbr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr.c.i
 .PHONY : src/libft/ft_putnbr.c.i
 
 src/libft/ft_putnbr.s: src/libft/ft_putnbr.c.s
@@ -1767,7 +1740,7 @@ src/libft/ft_putnbr.s: src/libft/ft_putnbr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putnbr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr.c.s
 .PHONY : src/libft/ft_putnbr.c.s
 
 src/libft/ft_putnbr_fd.o: src/libft/ft_putnbr_fd.c.o
@@ -1776,7 +1749,7 @@ src/libft/ft_putnbr_fd.o: src/libft/ft_putnbr_fd.c.o
 
 # target to build an object file
 src/libft/ft_putnbr_fd.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr_fd.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr_fd.c.o
 .PHONY : src/libft/ft_putnbr_fd.c.o
 
 src/libft/ft_putnbr_fd.i: src/libft/ft_putnbr_fd.c.i
@@ -1785,7 +1758,7 @@ src/libft/ft_putnbr_fd.i: src/libft/ft_putnbr_fd.c.i
 
 # target to preprocess a source file
 src/libft/ft_putnbr_fd.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr_fd.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr_fd.c.i
 .PHONY : src/libft/ft_putnbr_fd.c.i
 
 src/libft/ft_putnbr_fd.s: src/libft/ft_putnbr_fd.c.s
@@ -1794,7 +1767,7 @@ src/libft/ft_putnbr_fd.s: src/libft/ft_putnbr_fd.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putnbr_fd.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putnbr_fd.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putnbr_fd.c.s
 .PHONY : src/libft/ft_putnbr_fd.c.s
 
 src/libft/ft_putstr.o: src/libft/ft_putstr.c.o
@@ -1803,7 +1776,7 @@ src/libft/ft_putstr.o: src/libft/ft_putstr.c.o
 
 # target to build an object file
 src/libft/ft_putstr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr.c.o
 .PHONY : src/libft/ft_putstr.c.o
 
 src/libft/ft_putstr.i: src/libft/ft_putstr.c.i
@@ -1812,7 +1785,7 @@ src/libft/ft_putstr.i: src/libft/ft_putstr.c.i
 
 # target to preprocess a source file
 src/libft/ft_putstr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr.c.i
 .PHONY : src/libft/ft_putstr.c.i
 
 src/libft/ft_putstr.s: src/libft/ft_putstr.c.s
@@ -1821,7 +1794,7 @@ src/libft/ft_putstr.s: src/libft/ft_putstr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putstr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr.c.s
 .PHONY : src/libft/ft_putstr.c.s
 
 src/libft/ft_putstr_fd.o: src/libft/ft_putstr_fd.c.o
@@ -1830,7 +1803,7 @@ src/libft/ft_putstr_fd.o: src/libft/ft_putstr_fd.c.o
 
 # target to build an object file
 src/libft/ft_putstr_fd.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr_fd.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr_fd.c.o
 .PHONY : src/libft/ft_putstr_fd.c.o
 
 src/libft/ft_putstr_fd.i: src/libft/ft_putstr_fd.c.i
@@ -1839,7 +1812,7 @@ src/libft/ft_putstr_fd.i: src/libft/ft_putstr_fd.c.i
 
 # target to preprocess a source file
 src/libft/ft_putstr_fd.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr_fd.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr_fd.c.i
 .PHONY : src/libft/ft_putstr_fd.c.i
 
 src/libft/ft_putstr_fd.s: src/libft/ft_putstr_fd.c.s
@@ -1848,7 +1821,7 @@ src/libft/ft_putstr_fd.s: src/libft/ft_putstr_fd.c.s
 
 # target to generate assembly for a file
 src/libft/ft_putstr_fd.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_putstr_fd.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_putstr_fd.c.s
 .PHONY : src/libft/ft_putstr_fd.c.s
 
 src/libft/ft_range.o: src/libft/ft_range.c.o
@@ -1857,7 +1830,7 @@ src/libft/ft_range.o: src/libft/ft_range.c.o
 
 # target to build an object file
 src/libft/ft_range.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_range.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_range.c.o
 .PHONY : src/libft/ft_range.c.o
 
 src/libft/ft_range.i: src/libft/ft_range.c.i
@@ -1866,7 +1839,7 @@ src/libft/ft_range.i: src/libft/ft_range.c.i
 
 # target to preprocess a source file
 src/libft/ft_range.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_range.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_range.c.i
 .PHONY : src/libft/ft_range.c.i
 
 src/libft/ft_range.s: src/libft/ft_range.c.s
@@ -1875,7 +1848,7 @@ src/libft/ft_range.s: src/libft/ft_range.c.s
 
 # target to generate assembly for a file
 src/libft/ft_range.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_range.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_range.c.s
 .PHONY : src/libft/ft_range.c.s
 
 src/libft/ft_sqrt.o: src/libft/ft_sqrt.c.o
@@ -1884,7 +1857,7 @@ src/libft/ft_sqrt.o: src/libft/ft_sqrt.c.o
 
 # target to build an object file
 src/libft/ft_sqrt.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_sqrt.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_sqrt.c.o
 .PHONY : src/libft/ft_sqrt.c.o
 
 src/libft/ft_sqrt.i: src/libft/ft_sqrt.c.i
@@ -1893,7 +1866,7 @@ src/libft/ft_sqrt.i: src/libft/ft_sqrt.c.i
 
 # target to preprocess a source file
 src/libft/ft_sqrt.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_sqrt.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_sqrt.c.i
 .PHONY : src/libft/ft_sqrt.c.i
 
 src/libft/ft_sqrt.s: src/libft/ft_sqrt.c.s
@@ -1902,7 +1875,7 @@ src/libft/ft_sqrt.s: src/libft/ft_sqrt.c.s
 
 # target to generate assembly for a file
 src/libft/ft_sqrt.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_sqrt.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_sqrt.c.s
 .PHONY : src/libft/ft_sqrt.c.s
 
 src/libft/ft_strcat.o: src/libft/ft_strcat.c.o
@@ -1911,7 +1884,7 @@ src/libft/ft_strcat.o: src/libft/ft_strcat.c.o
 
 # target to build an object file
 src/libft/ft_strcat.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcat.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcat.c.o
 .PHONY : src/libft/ft_strcat.c.o
 
 src/libft/ft_strcat.i: src/libft/ft_strcat.c.i
@@ -1920,7 +1893,7 @@ src/libft/ft_strcat.i: src/libft/ft_strcat.c.i
 
 # target to preprocess a source file
 src/libft/ft_strcat.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcat.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcat.c.i
 .PHONY : src/libft/ft_strcat.c.i
 
 src/libft/ft_strcat.s: src/libft/ft_strcat.c.s
@@ -1929,7 +1902,7 @@ src/libft/ft_strcat.s: src/libft/ft_strcat.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strcat.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcat.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcat.c.s
 .PHONY : src/libft/ft_strcat.c.s
 
 src/libft/ft_strchr.o: src/libft/ft_strchr.c.o
@@ -1938,7 +1911,7 @@ src/libft/ft_strchr.o: src/libft/ft_strchr.c.o
 
 # target to build an object file
 src/libft/ft_strchr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strchr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strchr.c.o
 .PHONY : src/libft/ft_strchr.c.o
 
 src/libft/ft_strchr.i: src/libft/ft_strchr.c.i
@@ -1947,7 +1920,7 @@ src/libft/ft_strchr.i: src/libft/ft_strchr.c.i
 
 # target to preprocess a source file
 src/libft/ft_strchr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strchr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strchr.c.i
 .PHONY : src/libft/ft_strchr.c.i
 
 src/libft/ft_strchr.s: src/libft/ft_strchr.c.s
@@ -1956,7 +1929,7 @@ src/libft/ft_strchr.s: src/libft/ft_strchr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strchr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strchr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strchr.c.s
 .PHONY : src/libft/ft_strchr.c.s
 
 src/libft/ft_strclr.o: src/libft/ft_strclr.c.o
@@ -1965,7 +1938,7 @@ src/libft/ft_strclr.o: src/libft/ft_strclr.c.o
 
 # target to build an object file
 src/libft/ft_strclr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strclr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strclr.c.o
 .PHONY : src/libft/ft_strclr.c.o
 
 src/libft/ft_strclr.i: src/libft/ft_strclr.c.i
@@ -1974,7 +1947,7 @@ src/libft/ft_strclr.i: src/libft/ft_strclr.c.i
 
 # target to preprocess a source file
 src/libft/ft_strclr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strclr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strclr.c.i
 .PHONY : src/libft/ft_strclr.c.i
 
 src/libft/ft_strclr.s: src/libft/ft_strclr.c.s
@@ -1983,7 +1956,7 @@ src/libft/ft_strclr.s: src/libft/ft_strclr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strclr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strclr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strclr.c.s
 .PHONY : src/libft/ft_strclr.c.s
 
 src/libft/ft_strcmp.o: src/libft/ft_strcmp.c.o
@@ -1992,7 +1965,7 @@ src/libft/ft_strcmp.o: src/libft/ft_strcmp.c.o
 
 # target to build an object file
 src/libft/ft_strcmp.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcmp.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcmp.c.o
 .PHONY : src/libft/ft_strcmp.c.o
 
 src/libft/ft_strcmp.i: src/libft/ft_strcmp.c.i
@@ -2001,7 +1974,7 @@ src/libft/ft_strcmp.i: src/libft/ft_strcmp.c.i
 
 # target to preprocess a source file
 src/libft/ft_strcmp.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcmp.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcmp.c.i
 .PHONY : src/libft/ft_strcmp.c.i
 
 src/libft/ft_strcmp.s: src/libft/ft_strcmp.c.s
@@ -2010,7 +1983,7 @@ src/libft/ft_strcmp.s: src/libft/ft_strcmp.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strcmp.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcmp.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcmp.c.s
 .PHONY : src/libft/ft_strcmp.c.s
 
 src/libft/ft_strcpy.o: src/libft/ft_strcpy.c.o
@@ -2019,7 +1992,7 @@ src/libft/ft_strcpy.o: src/libft/ft_strcpy.c.o
 
 # target to build an object file
 src/libft/ft_strcpy.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcpy.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcpy.c.o
 .PHONY : src/libft/ft_strcpy.c.o
 
 src/libft/ft_strcpy.i: src/libft/ft_strcpy.c.i
@@ -2028,7 +2001,7 @@ src/libft/ft_strcpy.i: src/libft/ft_strcpy.c.i
 
 # target to preprocess a source file
 src/libft/ft_strcpy.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcpy.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcpy.c.i
 .PHONY : src/libft/ft_strcpy.c.i
 
 src/libft/ft_strcpy.s: src/libft/ft_strcpy.c.s
@@ -2037,7 +2010,7 @@ src/libft/ft_strcpy.s: src/libft/ft_strcpy.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strcpy.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strcpy.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strcpy.c.s
 .PHONY : src/libft/ft_strcpy.c.s
 
 src/libft/ft_strdel.o: src/libft/ft_strdel.c.o
@@ -2046,7 +2019,7 @@ src/libft/ft_strdel.o: src/libft/ft_strdel.c.o
 
 # target to build an object file
 src/libft/ft_strdel.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdel.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdel.c.o
 .PHONY : src/libft/ft_strdel.c.o
 
 src/libft/ft_strdel.i: src/libft/ft_strdel.c.i
@@ -2055,7 +2028,7 @@ src/libft/ft_strdel.i: src/libft/ft_strdel.c.i
 
 # target to preprocess a source file
 src/libft/ft_strdel.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdel.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdel.c.i
 .PHONY : src/libft/ft_strdel.c.i
 
 src/libft/ft_strdel.s: src/libft/ft_strdel.c.s
@@ -2064,7 +2037,7 @@ src/libft/ft_strdel.s: src/libft/ft_strdel.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strdel.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdel.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdel.c.s
 .PHONY : src/libft/ft_strdel.c.s
 
 src/libft/ft_strdup.o: src/libft/ft_strdup.c.o
@@ -2073,7 +2046,7 @@ src/libft/ft_strdup.o: src/libft/ft_strdup.c.o
 
 # target to build an object file
 src/libft/ft_strdup.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdup.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdup.c.o
 .PHONY : src/libft/ft_strdup.c.o
 
 src/libft/ft_strdup.i: src/libft/ft_strdup.c.i
@@ -2082,7 +2055,7 @@ src/libft/ft_strdup.i: src/libft/ft_strdup.c.i
 
 # target to preprocess a source file
 src/libft/ft_strdup.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdup.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdup.c.i
 .PHONY : src/libft/ft_strdup.c.i
 
 src/libft/ft_strdup.s: src/libft/ft_strdup.c.s
@@ -2091,7 +2064,7 @@ src/libft/ft_strdup.s: src/libft/ft_strdup.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strdup.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strdup.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strdup.c.s
 .PHONY : src/libft/ft_strdup.c.s
 
 src/libft/ft_strequ.o: src/libft/ft_strequ.c.o
@@ -2100,7 +2073,7 @@ src/libft/ft_strequ.o: src/libft/ft_strequ.c.o
 
 # target to build an object file
 src/libft/ft_strequ.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strequ.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strequ.c.o
 .PHONY : src/libft/ft_strequ.c.o
 
 src/libft/ft_strequ.i: src/libft/ft_strequ.c.i
@@ -2109,7 +2082,7 @@ src/libft/ft_strequ.i: src/libft/ft_strequ.c.i
 
 # target to preprocess a source file
 src/libft/ft_strequ.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strequ.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strequ.c.i
 .PHONY : src/libft/ft_strequ.c.i
 
 src/libft/ft_strequ.s: src/libft/ft_strequ.c.s
@@ -2118,7 +2091,7 @@ src/libft/ft_strequ.s: src/libft/ft_strequ.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strequ.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strequ.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strequ.c.s
 .PHONY : src/libft/ft_strequ.c.s
 
 src/libft/ft_striter.o: src/libft/ft_striter.c.o
@@ -2127,7 +2100,7 @@ src/libft/ft_striter.o: src/libft/ft_striter.c.o
 
 # target to build an object file
 src/libft/ft_striter.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striter.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striter.c.o
 .PHONY : src/libft/ft_striter.c.o
 
 src/libft/ft_striter.i: src/libft/ft_striter.c.i
@@ -2136,7 +2109,7 @@ src/libft/ft_striter.i: src/libft/ft_striter.c.i
 
 # target to preprocess a source file
 src/libft/ft_striter.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striter.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striter.c.i
 .PHONY : src/libft/ft_striter.c.i
 
 src/libft/ft_striter.s: src/libft/ft_striter.c.s
@@ -2145,7 +2118,7 @@ src/libft/ft_striter.s: src/libft/ft_striter.c.s
 
 # target to generate assembly for a file
 src/libft/ft_striter.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striter.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striter.c.s
 .PHONY : src/libft/ft_striter.c.s
 
 src/libft/ft_striteri.o: src/libft/ft_striteri.c.o
@@ -2154,7 +2127,7 @@ src/libft/ft_striteri.o: src/libft/ft_striteri.c.o
 
 # target to build an object file
 src/libft/ft_striteri.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striteri.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striteri.c.o
 .PHONY : src/libft/ft_striteri.c.o
 
 src/libft/ft_striteri.i: src/libft/ft_striteri.c.i
@@ -2163,7 +2136,7 @@ src/libft/ft_striteri.i: src/libft/ft_striteri.c.i
 
 # target to preprocess a source file
 src/libft/ft_striteri.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striteri.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striteri.c.i
 .PHONY : src/libft/ft_striteri.c.i
 
 src/libft/ft_striteri.s: src/libft/ft_striteri.c.s
@@ -2172,7 +2145,7 @@ src/libft/ft_striteri.s: src/libft/ft_striteri.c.s
 
 # target to generate assembly for a file
 src/libft/ft_striteri.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_striteri.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_striteri.c.s
 .PHONY : src/libft/ft_striteri.c.s
 
 src/libft/ft_strjoin.o: src/libft/ft_strjoin.c.o
@@ -2181,7 +2154,7 @@ src/libft/ft_strjoin.o: src/libft/ft_strjoin.c.o
 
 # target to build an object file
 src/libft/ft_strjoin.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strjoin.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strjoin.c.o
 .PHONY : src/libft/ft_strjoin.c.o
 
 src/libft/ft_strjoin.i: src/libft/ft_strjoin.c.i
@@ -2190,7 +2163,7 @@ src/libft/ft_strjoin.i: src/libft/ft_strjoin.c.i
 
 # target to preprocess a source file
 src/libft/ft_strjoin.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strjoin.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strjoin.c.i
 .PHONY : src/libft/ft_strjoin.c.i
 
 src/libft/ft_strjoin.s: src/libft/ft_strjoin.c.s
@@ -2199,7 +2172,7 @@ src/libft/ft_strjoin.s: src/libft/ft_strjoin.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strjoin.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strjoin.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strjoin.c.s
 .PHONY : src/libft/ft_strjoin.c.s
 
 src/libft/ft_strlcat.o: src/libft/ft_strlcat.c.o
@@ -2208,7 +2181,7 @@ src/libft/ft_strlcat.o: src/libft/ft_strlcat.c.o
 
 # target to build an object file
 src/libft/ft_strlcat.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlcat.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlcat.c.o
 .PHONY : src/libft/ft_strlcat.c.o
 
 src/libft/ft_strlcat.i: src/libft/ft_strlcat.c.i
@@ -2217,7 +2190,7 @@ src/libft/ft_strlcat.i: src/libft/ft_strlcat.c.i
 
 # target to preprocess a source file
 src/libft/ft_strlcat.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlcat.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlcat.c.i
 .PHONY : src/libft/ft_strlcat.c.i
 
 src/libft/ft_strlcat.s: src/libft/ft_strlcat.c.s
@@ -2226,7 +2199,7 @@ src/libft/ft_strlcat.s: src/libft/ft_strlcat.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strlcat.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlcat.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlcat.c.s
 .PHONY : src/libft/ft_strlcat.c.s
 
 src/libft/ft_strlen.o: src/libft/ft_strlen.c.o
@@ -2235,7 +2208,7 @@ src/libft/ft_strlen.o: src/libft/ft_strlen.c.o
 
 # target to build an object file
 src/libft/ft_strlen.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlen.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlen.c.o
 .PHONY : src/libft/ft_strlen.c.o
 
 src/libft/ft_strlen.i: src/libft/ft_strlen.c.i
@@ -2244,7 +2217,7 @@ src/libft/ft_strlen.i: src/libft/ft_strlen.c.i
 
 # target to preprocess a source file
 src/libft/ft_strlen.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlen.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlen.c.i
 .PHONY : src/libft/ft_strlen.c.i
 
 src/libft/ft_strlen.s: src/libft/ft_strlen.c.s
@@ -2253,7 +2226,7 @@ src/libft/ft_strlen.s: src/libft/ft_strlen.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strlen.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strlen.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strlen.c.s
 .PHONY : src/libft/ft_strlen.c.s
 
 src/libft/ft_strmap.o: src/libft/ft_strmap.c.o
@@ -2262,7 +2235,7 @@ src/libft/ft_strmap.o: src/libft/ft_strmap.c.o
 
 # target to build an object file
 src/libft/ft_strmap.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmap.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmap.c.o
 .PHONY : src/libft/ft_strmap.c.o
 
 src/libft/ft_strmap.i: src/libft/ft_strmap.c.i
@@ -2271,7 +2244,7 @@ src/libft/ft_strmap.i: src/libft/ft_strmap.c.i
 
 # target to preprocess a source file
 src/libft/ft_strmap.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmap.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmap.c.i
 .PHONY : src/libft/ft_strmap.c.i
 
 src/libft/ft_strmap.s: src/libft/ft_strmap.c.s
@@ -2280,7 +2253,7 @@ src/libft/ft_strmap.s: src/libft/ft_strmap.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strmap.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmap.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmap.c.s
 .PHONY : src/libft/ft_strmap.c.s
 
 src/libft/ft_strmapi.o: src/libft/ft_strmapi.c.o
@@ -2289,7 +2262,7 @@ src/libft/ft_strmapi.o: src/libft/ft_strmapi.c.o
 
 # target to build an object file
 src/libft/ft_strmapi.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmapi.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmapi.c.o
 .PHONY : src/libft/ft_strmapi.c.o
 
 src/libft/ft_strmapi.i: src/libft/ft_strmapi.c.i
@@ -2298,7 +2271,7 @@ src/libft/ft_strmapi.i: src/libft/ft_strmapi.c.i
 
 # target to preprocess a source file
 src/libft/ft_strmapi.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmapi.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmapi.c.i
 .PHONY : src/libft/ft_strmapi.c.i
 
 src/libft/ft_strmapi.s: src/libft/ft_strmapi.c.s
@@ -2307,7 +2280,7 @@ src/libft/ft_strmapi.s: src/libft/ft_strmapi.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strmapi.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strmapi.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strmapi.c.s
 .PHONY : src/libft/ft_strmapi.c.s
 
 src/libft/ft_strncat.o: src/libft/ft_strncat.c.o
@@ -2316,7 +2289,7 @@ src/libft/ft_strncat.o: src/libft/ft_strncat.c.o
 
 # target to build an object file
 src/libft/ft_strncat.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncat.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncat.c.o
 .PHONY : src/libft/ft_strncat.c.o
 
 src/libft/ft_strncat.i: src/libft/ft_strncat.c.i
@@ -2325,7 +2298,7 @@ src/libft/ft_strncat.i: src/libft/ft_strncat.c.i
 
 # target to preprocess a source file
 src/libft/ft_strncat.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncat.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncat.c.i
 .PHONY : src/libft/ft_strncat.c.i
 
 src/libft/ft_strncat.s: src/libft/ft_strncat.c.s
@@ -2334,7 +2307,7 @@ src/libft/ft_strncat.s: src/libft/ft_strncat.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strncat.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncat.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncat.c.s
 .PHONY : src/libft/ft_strncat.c.s
 
 src/libft/ft_strncmp.o: src/libft/ft_strncmp.c.o
@@ -2343,7 +2316,7 @@ src/libft/ft_strncmp.o: src/libft/ft_strncmp.c.o
 
 # target to build an object file
 src/libft/ft_strncmp.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncmp.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncmp.c.o
 .PHONY : src/libft/ft_strncmp.c.o
 
 src/libft/ft_strncmp.i: src/libft/ft_strncmp.c.i
@@ -2352,7 +2325,7 @@ src/libft/ft_strncmp.i: src/libft/ft_strncmp.c.i
 
 # target to preprocess a source file
 src/libft/ft_strncmp.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncmp.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncmp.c.i
 .PHONY : src/libft/ft_strncmp.c.i
 
 src/libft/ft_strncmp.s: src/libft/ft_strncmp.c.s
@@ -2361,7 +2334,7 @@ src/libft/ft_strncmp.s: src/libft/ft_strncmp.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strncmp.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncmp.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncmp.c.s
 .PHONY : src/libft/ft_strncmp.c.s
 
 src/libft/ft_strncpy.o: src/libft/ft_strncpy.c.o
@@ -2370,7 +2343,7 @@ src/libft/ft_strncpy.o: src/libft/ft_strncpy.c.o
 
 # target to build an object file
 src/libft/ft_strncpy.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncpy.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncpy.c.o
 .PHONY : src/libft/ft_strncpy.c.o
 
 src/libft/ft_strncpy.i: src/libft/ft_strncpy.c.i
@@ -2379,7 +2352,7 @@ src/libft/ft_strncpy.i: src/libft/ft_strncpy.c.i
 
 # target to preprocess a source file
 src/libft/ft_strncpy.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncpy.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncpy.c.i
 .PHONY : src/libft/ft_strncpy.c.i
 
 src/libft/ft_strncpy.s: src/libft/ft_strncpy.c.s
@@ -2388,7 +2361,7 @@ src/libft/ft_strncpy.s: src/libft/ft_strncpy.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strncpy.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strncpy.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strncpy.c.s
 .PHONY : src/libft/ft_strncpy.c.s
 
 src/libft/ft_strnequ.o: src/libft/ft_strnequ.c.o
@@ -2397,7 +2370,7 @@ src/libft/ft_strnequ.o: src/libft/ft_strnequ.c.o
 
 # target to build an object file
 src/libft/ft_strnequ.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnequ.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnequ.c.o
 .PHONY : src/libft/ft_strnequ.c.o
 
 src/libft/ft_strnequ.i: src/libft/ft_strnequ.c.i
@@ -2406,7 +2379,7 @@ src/libft/ft_strnequ.i: src/libft/ft_strnequ.c.i
 
 # target to preprocess a source file
 src/libft/ft_strnequ.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnequ.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnequ.c.i
 .PHONY : src/libft/ft_strnequ.c.i
 
 src/libft/ft_strnequ.s: src/libft/ft_strnequ.c.s
@@ -2415,7 +2388,7 @@ src/libft/ft_strnequ.s: src/libft/ft_strnequ.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strnequ.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnequ.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnequ.c.s
 .PHONY : src/libft/ft_strnequ.c.s
 
 src/libft/ft_strnew.o: src/libft/ft_strnew.c.o
@@ -2424,7 +2397,7 @@ src/libft/ft_strnew.o: src/libft/ft_strnew.c.o
 
 # target to build an object file
 src/libft/ft_strnew.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnew.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnew.c.o
 .PHONY : src/libft/ft_strnew.c.o
 
 src/libft/ft_strnew.i: src/libft/ft_strnew.c.i
@@ -2433,7 +2406,7 @@ src/libft/ft_strnew.i: src/libft/ft_strnew.c.i
 
 # target to preprocess a source file
 src/libft/ft_strnew.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnew.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnew.c.i
 .PHONY : src/libft/ft_strnew.c.i
 
 src/libft/ft_strnew.s: src/libft/ft_strnew.c.s
@@ -2442,7 +2415,7 @@ src/libft/ft_strnew.s: src/libft/ft_strnew.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strnew.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnew.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnew.c.s
 .PHONY : src/libft/ft_strnew.c.s
 
 src/libft/ft_strnstr.o: src/libft/ft_strnstr.c.o
@@ -2451,7 +2424,7 @@ src/libft/ft_strnstr.o: src/libft/ft_strnstr.c.o
 
 # target to build an object file
 src/libft/ft_strnstr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnstr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnstr.c.o
 .PHONY : src/libft/ft_strnstr.c.o
 
 src/libft/ft_strnstr.i: src/libft/ft_strnstr.c.i
@@ -2460,7 +2433,7 @@ src/libft/ft_strnstr.i: src/libft/ft_strnstr.c.i
 
 # target to preprocess a source file
 src/libft/ft_strnstr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnstr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnstr.c.i
 .PHONY : src/libft/ft_strnstr.c.i
 
 src/libft/ft_strnstr.s: src/libft/ft_strnstr.c.s
@@ -2469,7 +2442,7 @@ src/libft/ft_strnstr.s: src/libft/ft_strnstr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strnstr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strnstr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strnstr.c.s
 .PHONY : src/libft/ft_strnstr.c.s
 
 src/libft/ft_strrchr.o: src/libft/ft_strrchr.c.o
@@ -2478,7 +2451,7 @@ src/libft/ft_strrchr.o: src/libft/ft_strrchr.c.o
 
 # target to build an object file
 src/libft/ft_strrchr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strrchr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strrchr.c.o
 .PHONY : src/libft/ft_strrchr.c.o
 
 src/libft/ft_strrchr.i: src/libft/ft_strrchr.c.i
@@ -2487,7 +2460,7 @@ src/libft/ft_strrchr.i: src/libft/ft_strrchr.c.i
 
 # target to preprocess a source file
 src/libft/ft_strrchr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strrchr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strrchr.c.i
 .PHONY : src/libft/ft_strrchr.c.i
 
 src/libft/ft_strrchr.s: src/libft/ft_strrchr.c.s
@@ -2496,7 +2469,7 @@ src/libft/ft_strrchr.s: src/libft/ft_strrchr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strrchr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strrchr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strrchr.c.s
 .PHONY : src/libft/ft_strrchr.c.s
 
 src/libft/ft_strsplit.o: src/libft/ft_strsplit.c.o
@@ -2505,7 +2478,7 @@ src/libft/ft_strsplit.o: src/libft/ft_strsplit.c.o
 
 # target to build an object file
 src/libft/ft_strsplit.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsplit.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsplit.c.o
 .PHONY : src/libft/ft_strsplit.c.o
 
 src/libft/ft_strsplit.i: src/libft/ft_strsplit.c.i
@@ -2514,7 +2487,7 @@ src/libft/ft_strsplit.i: src/libft/ft_strsplit.c.i
 
 # target to preprocess a source file
 src/libft/ft_strsplit.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsplit.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsplit.c.i
 .PHONY : src/libft/ft_strsplit.c.i
 
 src/libft/ft_strsplit.s: src/libft/ft_strsplit.c.s
@@ -2523,7 +2496,7 @@ src/libft/ft_strsplit.s: src/libft/ft_strsplit.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strsplit.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsplit.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsplit.c.s
 .PHONY : src/libft/ft_strsplit.c.s
 
 src/libft/ft_strstr.o: src/libft/ft_strstr.c.o
@@ -2532,7 +2505,7 @@ src/libft/ft_strstr.o: src/libft/ft_strstr.c.o
 
 # target to build an object file
 src/libft/ft_strstr.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strstr.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strstr.c.o
 .PHONY : src/libft/ft_strstr.c.o
 
 src/libft/ft_strstr.i: src/libft/ft_strstr.c.i
@@ -2541,7 +2514,7 @@ src/libft/ft_strstr.i: src/libft/ft_strstr.c.i
 
 # target to preprocess a source file
 src/libft/ft_strstr.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strstr.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strstr.c.i
 .PHONY : src/libft/ft_strstr.c.i
 
 src/libft/ft_strstr.s: src/libft/ft_strstr.c.s
@@ -2550,7 +2523,7 @@ src/libft/ft_strstr.s: src/libft/ft_strstr.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strstr.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strstr.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strstr.c.s
 .PHONY : src/libft/ft_strstr.c.s
 
 src/libft/ft_strsub.o: src/libft/ft_strsub.c.o
@@ -2559,7 +2532,7 @@ src/libft/ft_strsub.o: src/libft/ft_strsub.c.o
 
 # target to build an object file
 src/libft/ft_strsub.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsub.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsub.c.o
 .PHONY : src/libft/ft_strsub.c.o
 
 src/libft/ft_strsub.i: src/libft/ft_strsub.c.i
@@ -2568,7 +2541,7 @@ src/libft/ft_strsub.i: src/libft/ft_strsub.c.i
 
 # target to preprocess a source file
 src/libft/ft_strsub.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsub.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsub.c.i
 .PHONY : src/libft/ft_strsub.c.i
 
 src/libft/ft_strsub.s: src/libft/ft_strsub.c.s
@@ -2577,7 +2550,7 @@ src/libft/ft_strsub.s: src/libft/ft_strsub.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strsub.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strsub.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strsub.c.s
 .PHONY : src/libft/ft_strsub.c.s
 
 src/libft/ft_strtrim.o: src/libft/ft_strtrim.c.o
@@ -2586,7 +2559,7 @@ src/libft/ft_strtrim.o: src/libft/ft_strtrim.c.o
 
 # target to build an object file
 src/libft/ft_strtrim.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strtrim.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strtrim.c.o
 .PHONY : src/libft/ft_strtrim.c.o
 
 src/libft/ft_strtrim.i: src/libft/ft_strtrim.c.i
@@ -2595,7 +2568,7 @@ src/libft/ft_strtrim.i: src/libft/ft_strtrim.c.i
 
 # target to preprocess a source file
 src/libft/ft_strtrim.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strtrim.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strtrim.c.i
 .PHONY : src/libft/ft_strtrim.c.i
 
 src/libft/ft_strtrim.s: src/libft/ft_strtrim.c.s
@@ -2604,7 +2577,7 @@ src/libft/ft_strtrim.s: src/libft/ft_strtrim.c.s
 
 # target to generate assembly for a file
 src/libft/ft_strtrim.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_strtrim.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_strtrim.c.s
 .PHONY : src/libft/ft_strtrim.c.s
 
 src/libft/ft_swap.o: src/libft/ft_swap.c.o
@@ -2613,7 +2586,7 @@ src/libft/ft_swap.o: src/libft/ft_swap.c.o
 
 # target to build an object file
 src/libft/ft_swap.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_swap.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_swap.c.o
 .PHONY : src/libft/ft_swap.c.o
 
 src/libft/ft_swap.i: src/libft/ft_swap.c.i
@@ -2622,7 +2595,7 @@ src/libft/ft_swap.i: src/libft/ft_swap.c.i
 
 # target to preprocess a source file
 src/libft/ft_swap.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_swap.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_swap.c.i
 .PHONY : src/libft/ft_swap.c.i
 
 src/libft/ft_swap.s: src/libft/ft_swap.c.s
@@ -2631,7 +2604,7 @@ src/libft/ft_swap.s: src/libft/ft_swap.c.s
 
 # target to generate assembly for a file
 src/libft/ft_swap.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_swap.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_swap.c.s
 .PHONY : src/libft/ft_swap.c.s
 
 src/libft/ft_tolower.o: src/libft/ft_tolower.c.o
@@ -2640,7 +2613,7 @@ src/libft/ft_tolower.o: src/libft/ft_tolower.c.o
 
 # target to build an object file
 src/libft/ft_tolower.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_tolower.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_tolower.c.o
 .PHONY : src/libft/ft_tolower.c.o
 
 src/libft/ft_tolower.i: src/libft/ft_tolower.c.i
@@ -2649,7 +2622,7 @@ src/libft/ft_tolower.i: src/libft/ft_tolower.c.i
 
 # target to preprocess a source file
 src/libft/ft_tolower.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_tolower.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_tolower.c.i
 .PHONY : src/libft/ft_tolower.c.i
 
 src/libft/ft_tolower.s: src/libft/ft_tolower.c.s
@@ -2658,7 +2631,7 @@ src/libft/ft_tolower.s: src/libft/ft_tolower.c.s
 
 # target to generate assembly for a file
 src/libft/ft_tolower.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_tolower.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_tolower.c.s
 .PHONY : src/libft/ft_tolower.c.s
 
 src/libft/ft_toupper.o: src/libft/ft_toupper.c.o
@@ -2667,7 +2640,7 @@ src/libft/ft_toupper.o: src/libft/ft_toupper.c.o
 
 # target to build an object file
 src/libft/ft_toupper.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_toupper.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_toupper.c.o
 .PHONY : src/libft/ft_toupper.c.o
 
 src/libft/ft_toupper.i: src/libft/ft_toupper.c.i
@@ -2676,7 +2649,7 @@ src/libft/ft_toupper.i: src/libft/ft_toupper.c.i
 
 # target to preprocess a source file
 src/libft/ft_toupper.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_toupper.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_toupper.c.i
 .PHONY : src/libft/ft_toupper.c.i
 
 src/libft/ft_toupper.s: src/libft/ft_toupper.c.s
@@ -2685,7 +2658,7 @@ src/libft/ft_toupper.s: src/libft/ft_toupper.c.s
 
 # target to generate assembly for a file
 src/libft/ft_toupper.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/ft_toupper.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/ft_toupper.c.s
 .PHONY : src/libft/ft_toupper.c.s
 
 src/libft/get_next_line.o: src/libft/get_next_line.c.o
@@ -2694,7 +2667,7 @@ src/libft/get_next_line.o: src/libft/get_next_line.c.o
 
 # target to build an object file
 src/libft/get_next_line.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/get_next_line.c.o
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/get_next_line.c.o
 .PHONY : src/libft/get_next_line.c.o
 
 src/libft/get_next_line.i: src/libft/get_next_line.c.i
@@ -2703,7 +2676,7 @@ src/libft/get_next_line.i: src/libft/get_next_line.c.i
 
 # target to preprocess a source file
 src/libft/get_next_line.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/get_next_line.c.i
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/get_next_line.c.i
 .PHONY : src/libft/get_next_line.c.i
 
 src/libft/get_next_line.s: src/libft/get_next_line.c.s
@@ -2712,35 +2685,35 @@ src/libft/get_next_line.s: src/libft/get_next_line.c.s
 
 # target to generate assembly for a file
 src/libft/get_next_line.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/libft/get_next_line.c.s
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/libft/get_next_line.c.s
 .PHONY : src/libft/get_next_line.c.s
 
-src/rotation.o: src/rotation.c.o
+src/mult.o: src/mult.c.o
 
-.PHONY : src/rotation.o
+.PHONY : src/mult.o
 
 # target to build an object file
-src/rotation.c.o:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/rotation.c.o
-.PHONY : src/rotation.c.o
+src/mult.c.o:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/mult.c.o
+.PHONY : src/mult.c.o
 
-src/rotation.i: src/rotation.c.i
+src/mult.i: src/mult.c.i
 
-.PHONY : src/rotation.i
+.PHONY : src/mult.i
 
 # target to preprocess a source file
-src/rotation.c.i:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/rotation.c.i
-.PHONY : src/rotation.c.i
+src/mult.c.i:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/mult.c.i
+.PHONY : src/mult.c.i
 
-src/rotation.s: src/rotation.c.s
+src/mult.s: src/mult.c.s
 
-.PHONY : src/rotation.s
+.PHONY : src/mult.s
 
 # target to generate assembly for a file
-src/rotation.c.s:
-	$(MAKE) -f CMakeFiles/fractol.dir/build.make CMakeFiles/fractol.dir/src/rotation.c.s
-.PHONY : src/rotation.c.s
+src/mult.c.s:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/mult.c.s
+.PHONY : src/mult.c.s
 
 # Help Target
 help:
@@ -2750,13 +2723,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... fractol"
+	@echo "... am"
 	@echo "... src/action.o"
 	@echo "... src/action.i"
 	@echo "... src/action.s"
-	@echo "... src/draw_line.o"
-	@echo "... src/draw_line.i"
-	@echo "... src/draw_line.s"
 	@echo "... src/formulas.o"
 	@echo "... src/formulas.i"
 	@echo "... src/formulas.s"
@@ -3039,9 +3009,9 @@ help:
 	@echo "... src/libft/get_next_line.o"
 	@echo "... src/libft/get_next_line.i"
 	@echo "... src/libft/get_next_line.s"
-	@echo "... src/rotation.o"
-	@echo "... src/rotation.i"
-	@echo "... src/rotation.s"
+	@echo "... src/mult.o"
+	@echo "... src/mult.i"
+	@echo "... src/mult.s"
 .PHONY : help
 
 

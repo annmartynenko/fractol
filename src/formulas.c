@@ -32,7 +32,6 @@ void	mandelbrot(t_mass *map, int x, int y)
 	i = -1;
 	a.pr = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
 	a.pi = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
-	a.newRe = a.newIm = a.oldIm = a.oldRe = 0;
 	while (++i < a.max_iter)
 	{
 		a.oldRe = a.newRe;
@@ -43,7 +42,7 @@ void	mandelbrot(t_mass *map, int x, int y)
 			break;
 	}
 	if (i == a.max_iter)
-		map->image[x + (y * map->weight)] = 0xffe1ff;
+		map->image[x + (y * map->weight)] =  map->green + map->blue * i;
 	else
 		map->image[x + (y * map->weight)] = 0xffe1ff * i;
 
@@ -88,8 +87,8 @@ void	start_h(t_calc *a, t_mass *map)
 //	map->zoom = 1;
 //	map->moveX = -0.5;
 //	map->moveY = 0;
-	map->cIm = -0.1;
-	map->cRe = 0.258;
+	map->cIm = 0;
+	map->cRe = 0;
 	a->max_iter = 300;
 	a->newRe = 0;
 	a->newIm = 0;
@@ -105,16 +104,53 @@ void	heart(t_mass *map, int x, int y)
 
 	start_h(&a, map);
 	i = -1;
+	a.pr = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
+	a.pi = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
 	while (++i < a.max_iter)
 	{
-		a.newRe = a.oldRe * a.oldRe - a.oldIm * a.oldIm + map->cRe;
-		a.newIm = 2 * fabs(a.oldRe) * a.oldIm + map->cIm;
 		a.oldRe = a.newRe;
+		a.oldIm = a.newIm;
+		a.newRe = fabs(a.oldRe * a.oldRe - a.oldIm * a.oldIm) + a.pr;
+		a.newIm = 2 * a.oldRe * a.oldIm + a.pi;
 		if (a.newRe * a.newRe + a.newIm * a.newIm > 4)
 			break;
 	}
 	if (i == a.max_iter)
 		map->image[x + (y * map->weight)] = 0xffe1ff;
 	else
-		map->image[x + (y * map->weight)] = 0xffffff * i;
+		map->image[x + (y * map->weight)] = 0xffe1ff * i;
+}
+
+void	start_c(t_calc *a, t_mass *map)
+{
+	map->zoom = 1;
+	map->moveX = 0;
+	map->moveY = 0;
+	a->max_iter = 300;
+	a->newIm = a->newRe = a->oldIm = a->oldRe = 0;
+}
+
+void	flower(t_mass *map, int x, int y)
+{
+	int i;
+	t_calc a;
+
+	start_c(&a, map);
+	i = -1;
+	a.newRe = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight) + map->moveX;
+	a.newIm = (y - map->height / 2) / (0.5 * map->zoom * map->height) + map->moveY;
+	while (++i < a.max_iter)
+	{
+		a.oldRe = a.newRe;
+		a.oldIm = a.newIm;
+		a.newRe = log(a.oldRe * a.oldRe) - log(a.oldIm * a.oldIm) + map->cIm;
+		a.newIm = 2 * a.oldRe * a.oldIm + map->cIm;
+		if (a.newRe * a.newRe + a.newIm * a.newIm > 4)
+			break;
+	}
+	if (i == a.max_iter)
+		map->image[x + (y * map->weight)] = 0xffe1ff;
+	else
+		map->image[x + (y * map->weight)] = 0xffe1ff * i;
+
 }

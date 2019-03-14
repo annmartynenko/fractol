@@ -51,6 +51,9 @@ typedef struct	s_mass
 	double	moveY;
 	double	cRe;
 	double 	cIm;
+	int		red;
+	int		green;
+	int		blue;
 }				t_mass;
 
 typedef struct	s_read
@@ -69,5 +72,6 @@ int		julia_move(int x, int y, t_mass *map);
 void	choose(t_mass *map, int x, int y);
 void	mult(t_mass *map);
 void	heart(t_mass *map, int x, int y);
+void	flower(t_mass *map, int x, int y);
 
 #endif

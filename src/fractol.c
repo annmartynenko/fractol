@@ -29,6 +29,8 @@ void	choose(t_mass *map, int x, int y)
 	else if (map->mark == 2)
 		mandelbrot(map, x, y);
 	else if (map->mark == 3)
+		flower(map, x, y);
+	else if (map->mark == 4)
 		heart(map, x, y);
 }
 
@@ -38,8 +40,10 @@ void	find_name(t_mass *map, char **av)
 		map->mark = 1;
 	else if (!ft_strcmp(av[1], "mandelbrot"))
 		map->mark = 2;
-	else if(!ft_strcmp(av[1], "heart"))
+	else if(!ft_strcmp(av[1], "flower"))
 		map->mark = 3;
+	else if(!ft_strcmp(av[1], "heart"))
+		map->mark = 4;
 //	else
 //		exit_x();
 }
@@ -56,6 +60,9 @@ void	create_map(t_mass *map)
 	map->moveY = 0;
 	map->cRe = -0.7;
 	map->cIm = 0.27015;
+	map->red = 255;
+	map->blue = 255;
+	map->green = 255;
 	map->mlx = mlx_init();
 	map->wind = mlx_new_window(map->mlx, map->weight, map->height, "Fractol");
 	map->img = mlx_new_image(map->mlx, map->weight, map->height);

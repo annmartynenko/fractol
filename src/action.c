@@ -27,9 +27,9 @@ int	key_press(int keycode, t_mass *map)
 	else if (keycode == 125)
 		map->moveY -= 0.1;
 	else if (keycode == 69)
-		map->zoom *= 1.1;
+		map->zoom *= 1.01;
 	else if (keycode == 78)
-		map->zoom *= 0.9;
+		map->zoom *= 0.99;
 	ft_printf("x1 %d y1 %d\n", map->moveX, map->moveY);
 //	choose(map, x, y);
 	mult(map);
