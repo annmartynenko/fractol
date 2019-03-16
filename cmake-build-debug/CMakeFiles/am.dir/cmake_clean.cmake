@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/am.dir/src/fractol.c.o"
+  "CMakeFiles/am.dir/src/formulas2.c.o"
   "CMakeFiles/am.dir/src/action.c.o"
   "CMakeFiles/am.dir/src/mult.c.o"
   "CMakeFiles/am.dir/src/formulas.c.o"

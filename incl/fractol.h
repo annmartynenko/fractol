@@ -19,41 +19,44 @@
 # include <math.h>
 # include "../src/libft/libft.h"
 # include <pthread.h>
-# define PTHREAD 8
+# define PTHREAD 4
 # define HEIGHT 900
 # define WEIGHT 1300
+# define MAX_ITER 100
 
 typedef struct	s_calc
 {
-	double	pr;
-	double	pi;
-	double	newRe;
-	double	newIm;
-	double	oldRe;
-	double	oldIm;
-	int		max_iter;
+	double		pr;
+	double		pi;
+	double		new_re;
+	double		new_im;
+	double		old_re;
+	double		old_im;
+	int			max_iter;
 }				t_calc;
 
 typedef struct	s_mass
 {
-	int		height;
-	int		weight;
-	void	*wind;
-	void	*mlx;
-	void	*img;
-	int 	*image;
-	int		bpp;
-	int		size_line;
-	int		endian;
-	int 	mark;
-	double	zoom;
-	double	moveX;
-	double	moveY;
-	double	cRe;
-	double 	cIm;
-	int		red;
-	int		green;
-	int		blue;
+	int			height;
+	int			weight;
+	void		*wind;
+	void		*mlx;
+	void		*img;
+	char		*image;
+	int			bpp;
+	int			size_line;
+	int			endian;
+	int			mark;
+	double		zoom;
+	double		move_x;
+	double		move_y;
+	double		c_re;
+	double		c_im;
+	int			red;
+	int			green;
+	int			blue;
+	double		z;
+	int			julia;
 }				t_mass;
 
 typedef struct	s_read
@@ -63,15 +66,18 @@ typedef struct	s_read
 	pthread_t	way;
 }				t_read;
 
-void	mandelbrot(t_mass *map, int x, int y);
-void	julia(t_mass *map, int x, int y);
-int		key_press(int keycode, t_mass *map);
-int		mouse_move(int keycode,int x, int y, t_mass *map);
-void	find_name(t_mass *map, char **av);
-int		julia_move(int x, int y, t_mass *map);
-void	choose(t_mass *map, int x, int y);
-void	mult(t_mass *map);
-void	heart(t_mass *map, int x, int y);
-void	flower(t_mass *map, int x, int y);
+void			mandelbrot(t_mass *map, int x, int y);
+void			julia(t_mass *map, int x, int y);
+int				key_press(int keycode, t_mass *map);
+int				mouse_move(int keycode, int x, int y, t_mass *map);
+void			find_name(t_mass *map, char **av);
+int				julia_move(int x, int y, t_mass *map);
+void			choose(t_mass *map, int x, int y);
+void			mult(t_mass *map);
+void			celtic(t_mass *map, int x, int y);
+void			flower(t_mass *map, int x, int y);
+void			get_color(int x, int y, t_mass *map, int it);
+void			ship(t_mass *map, int x, int y);
+void			print_action(t_mass *map);
 
 #endif

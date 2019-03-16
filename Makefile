@@ -26,7 +26,7 @@ FLAGS=	-Wall -Wextra -Werror
 
 NAME=	fractol
 
-SRC_NAME=	fractol.c formulas.c action.c mult.c
+SRC_NAME =	fractol.c formulas.c action.c mult.c formulas2.c
 
 INCLD=		fractol.h
 

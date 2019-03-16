@@ -9,6 +9,7 @@ include_directories(.)
 
 add_executable(am
         src/fractol.c
+        src/formulas2.c
         incl/fractol.h
         src/action.c
         src/mult.c

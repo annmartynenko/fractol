@@ -91,6 +91,9 @@
 		<Unit filename="/Users/amartyne/am/src/formulas.c">
 			<Option target="am"/>
 		</Unit>
+		<Unit filename="/Users/amartyne/am/src/formulas2.c">
+			<Option target="am"/>
+		</Unit>
 		<Unit filename="/Users/amartyne/am/src/fractol.c">
 			<Option target="am"/>
 		</Unit>

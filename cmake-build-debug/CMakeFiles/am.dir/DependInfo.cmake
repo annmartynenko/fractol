@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/amartyne/am/src/action.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/action.c.o"
   "/Users/amartyne/am/src/formulas.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/formulas.c.o"
+  "/Users/amartyne/am/src/formulas2.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/formulas2.c.o"
   "/Users/amartyne/am/src/fractol.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/fractol.c.o"
   "/Users/amartyne/am/src/libft/ft_arrfree.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/libft/ft_arrfree.c.o"
   "/Users/amartyne/am/src/libft/ft_atoi.c" "/Users/amartyne/am/cmake-build-debug/CMakeFiles/am.dir/src/libft/ft_atoi.c.o"

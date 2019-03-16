@@ -20,10 +20,6 @@ math.h
 pthread.h
 -
 
-/Users/amartyne/am/src/formulas.c
-../incl/fractol.h
-/Users/amartyne/am/incl/fractol.h
-
 /Users/amartyne/am/src/libft/libft.h
 string.h
 -
@@ -41,4 +37,8 @@ unistd.h
 -
 stdarg.h
 -
+
+/Users/amartyne/am/src/mult.c
+../incl/fractol.h
+/Users/amartyne/am/incl/fractol.h
 

@@ -9,6 +9,10 @@ CMakeFiles/am.dir/src/formulas.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/formulas.c.o: ../src/formulas.c
 CMakeFiles/am.dir/src/formulas.c.o: ../src/libft/libft.h
 
+CMakeFiles/am.dir/src/formulas2.c.o: ../incl/fractol.h
+CMakeFiles/am.dir/src/formulas2.c.o: ../src/formulas2.c
+CMakeFiles/am.dir/src/formulas2.c.o: ../src/libft/libft.h
+
 CMakeFiles/am.dir/src/fractol.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/fractol.c.o: ../src/fractol.c
 CMakeFiles/am.dir/src/fractol.c.o: ../src/libft/libft.h
