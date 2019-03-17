@@ -150,6 +150,33 @@ src/action.c.s:
 	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action.c.s
 .PHONY : src/action.c.s
 
+src/action2.o: src/action2.c.o
+
+.PHONY : src/action2.o
+
+# target to build an object file
+src/action2.c.o:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action2.c.o
+.PHONY : src/action2.c.o
+
+src/action2.i: src/action2.c.i
+
+.PHONY : src/action2.i
+
+# target to preprocess a source file
+src/action2.c.i:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action2.c.i
+.PHONY : src/action2.c.i
+
+src/action2.s: src/action2.c.s
+
+.PHONY : src/action2.s
+
+# target to generate assembly for a file
+src/action2.c.s:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/action2.c.s
+.PHONY : src/action2.c.s
+
 src/formulas.o: src/formulas.c.o
 
 .PHONY : src/formulas.o
@@ -203,6 +230,60 @@ src/formulas2.s: src/formulas2.c.s
 src/formulas2.c.s:
 	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas2.c.s
 .PHONY : src/formulas2.c.s
+
+src/formulas3.o: src/formulas3.c.o
+
+.PHONY : src/formulas3.o
+
+# target to build an object file
+src/formulas3.c.o:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas3.c.o
+.PHONY : src/formulas3.c.o
+
+src/formulas3.i: src/formulas3.c.i
+
+.PHONY : src/formulas3.i
+
+# target to preprocess a source file
+src/formulas3.c.i:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas3.c.i
+.PHONY : src/formulas3.c.i
+
+src/formulas3.s: src/formulas3.c.s
+
+.PHONY : src/formulas3.s
+
+# target to generate assembly for a file
+src/formulas3.c.s:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas3.c.s
+.PHONY : src/formulas3.c.s
+
+src/formulas4.o: src/formulas4.c.o
+
+.PHONY : src/formulas4.o
+
+# target to build an object file
+src/formulas4.c.o:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas4.c.o
+.PHONY : src/formulas4.c.o
+
+src/formulas4.i: src/formulas4.c.i
+
+.PHONY : src/formulas4.i
+
+# target to preprocess a source file
+src/formulas4.c.i:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas4.c.i
+.PHONY : src/formulas4.c.i
+
+src/formulas4.s: src/formulas4.c.s
+
+.PHONY : src/formulas4.s
+
+# target to generate assembly for a file
+src/formulas4.c.s:
+	$(MAKE) -f CMakeFiles/am.dir/build.make CMakeFiles/am.dir/src/formulas4.c.s
+.PHONY : src/formulas4.c.s
 
 src/fractol.o: src/fractol.c.o
 
@@ -2754,12 +2835,21 @@ help:
 	@echo "... src/action.o"
 	@echo "... src/action.i"
 	@echo "... src/action.s"
+	@echo "... src/action2.o"
+	@echo "... src/action2.i"
+	@echo "... src/action2.s"
 	@echo "... src/formulas.o"
 	@echo "... src/formulas.i"
 	@echo "... src/formulas.s"
 	@echo "... src/formulas2.o"
 	@echo "... src/formulas2.i"
 	@echo "... src/formulas2.s"
+	@echo "... src/formulas3.o"
+	@echo "... src/formulas3.i"
+	@echo "... src/formulas3.s"
+	@echo "... src/formulas4.o"
+	@echo "... src/formulas4.i"
+	@echo "... src/formulas4.s"
 	@echo "... src/fractol.o"
 	@echo "... src/fractol.i"
 	@echo "... src/fractol.s"

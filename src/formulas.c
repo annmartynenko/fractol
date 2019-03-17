@@ -14,7 +14,6 @@
 
 void	start_m(t_calc *a, t_mass *map, int x, int y)
 {
-	a->max_iter = MAX_ITER;
 	a->new_re = 0;
 	a->new_im = 0;
 	a->old_im = 0;
@@ -32,7 +31,7 @@ void	mandelbrot(t_mass *map, int x, int y)
 
 	start_m(&a, map, x, y);
 	i = -1;
-	while (++i < a.max_iter)
+	while (++i < map->max_iter)
 	{
 		a.old_re = a.new_re;
 		a.old_im = a.new_im;
@@ -41,15 +40,11 @@ void	mandelbrot(t_mass *map, int x, int y)
 		if (a.new_re * a.new_re + a.new_im * a.new_im > 4)
 			break ;
 	}
-	map->z = (a.new_re * a.new_re + a.new_im * a.new_im);
 	get_color(x, y, map, i);
 }
 
 void	start_j(t_calc *a, t_mass *map, int x, int y)
 {
-	map->move_x = 0;
-	map->move_y = 0;
-	a->max_iter = MAX_ITER;
 	a->new_im = 0;
 	a->new_re = 0;
 	a->old_im = 0;
@@ -69,7 +64,7 @@ void	julia(t_mass *map, int x, int y)
 
 	start_j(&a, map, x, y);
 	i = -1;
-	while (++i < a.max_iter)
+	while (++i < map->max_iter)
 	{
 		a.old_re = a.new_re;
 		a.old_im = a.new_im;
@@ -78,41 +73,5 @@ void	julia(t_mass *map, int x, int y)
 		if (a.new_re * a.new_re + a.new_im * a.new_im > 4)
 			break ;
 	}
-	map->z = a.new_re * a.new_re + a.new_im * a.new_im;
-	get_color(x, y, map, i);
-}
-
-void	start_c(t_calc *a, t_mass *map, int x, int y)
-{
-	map->c_im = 0;
-	map->c_re = 0;
-	a->max_iter = MAX_ITER;
-	a->new_re = 0;
-	a->new_im = 0;
-	a->old_im = 0;
-	a->old_re = 0;
-	a->pr = 1.5 * (x - map->weight / 2) / (0.5 * map->zoom * map->weight)\
-	+ map->move_x;
-	a->pi = (y - map->height / 2) / (0.5 * map->zoom * map->height)\
-	+ map->move_y;
-}
-
-void	celtic(t_mass *map, int x, int y)
-{
-	int		i;
-	t_calc	a;
-
-	start_c(&a, map, x, y);
-	i = -1;
-	while (++i < a.max_iter)
-	{
-		a.old_re = a.new_re;
-		a.old_im = a.new_im;
-		a.new_re = fabs(a.old_re * a.old_re - a.old_im * a.old_im) + a.pr;
-		a.new_im = 2 * a.old_re * a.old_im + a.pi;
-		if (a.new_re * a.new_re + a.new_im * a.new_im > 4)
-			break ;
-	}
-	map->z = a.new_re * a.new_re + a.new_im * a.new_im;
 	get_color(x, y, map, i);
 }

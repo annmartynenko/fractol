@@ -14,10 +14,21 @@
 
 void	print_action(t_mass *map)
 {
-	mlx_string_put(map->mlx, map->wind, 10, 10, 16777215, "zoom: +/- or 'mouse'");
-	mlx_string_put(map->mlx, map->wind, 10, 30, 36561315, "color: r, g, b");
-	mlx_string_put(map->mlx, map->wind, 10, 50, 24586245, "move: arrows");
-	mlx_string_put(map->mlx, map->wind, 10, 70, 17844646, "pause in julia: space");
+	mlx_string_put(map->mlx, map->wind, 10, 5,\
+	0xf5978a, "zoom: +/- or 'mouse'");
+	mlx_string_put(map->mlx, map->wind, 10, 25, 0xf5978a, "color: r, g, b");
+	mlx_string_put(map->mlx, map->wind, 10, 45, 0xf5978a, "move: arrows");
+	mlx_string_put(map->mlx, map->wind, 10, 65,\
+	0xf5978a, "pause in julia: space");
+	mlx_string_put(map->mlx, map->wind, 10, 85, 0xf5978a, "change fractal:");
+	mlx_string_put(map->mlx, map->wind, 10, 105,\
+	0xf5978a, "1-julia, 2-mandelbrot");
+	mlx_string_put(map->mlx, map->wind, 10, 125,\
+	0xf5978a, "3-flower, 4-celtic");
+	mlx_string_put(map->mlx, map->wind, 10, 145,\
+	0xf5978a, "5-ship, 6-tricorn");
+	mlx_string_put(map->mlx, map->wind, 10, 165,\
+	0xf5978a, "7-heart, 8-buffalo");
 }
 
 void	get_color(int x, int y, t_mass *map, int it)
@@ -27,9 +38,10 @@ void	get_color(int x, int y, t_mass *map, int it)
 
 	i = y * map->size_line + x * 4;
 	k = it * log(2);
-	if (it == MAX_ITER)
+	if (it == map->max_iter)
 	{
 		map->image[i] = (char)0;
+		map->image[++i] = (char)0;
 		map->image[++i] = (char)0;
 		map->image[++i] = (char)0;
 	}

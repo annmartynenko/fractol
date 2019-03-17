@@ -13,7 +13,10 @@ add_executable(am
         incl/fractol.h
         src/action.c
         src/mult.c
+        src/formulas3.c
+        src/formulas4.c
         src/formulas.c
+        src/action2.c
         src/libft/ft_printf/extra_fun.c
         src/libft/ft_printf/find_flag.c
         src/libft/ft_printf/for_add.c

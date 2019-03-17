@@ -25,8 +25,10 @@ void	xy(t_mass *map, int keycode)
 		add = 0.0001;
 	else if (map->zoom >= 1000 && map->zoom < 10000)
 		add = 0.00001;
-	else if (map->zoom >= 10000)
+	else if (map->zoom >= 10000 && map->zoom < 100000)
 		add = 0.000001;
+	else if (map->zoom >= 100000)
+		add = 0.0000001;
 	if (keycode == 124)
 		map->move_x -= add;
 	else if (keycode == 123)
@@ -37,30 +39,19 @@ void	xy(t_mass *map, int keycode)
 		map->move_y -= add;
 }
 
-void	key_julia(int *julia)
-{
-	if ((*julia) == 1)
-		(*julia) = 0;
-	else
-		(*julia) = 1;
-}
-
 int		key_press(int keycode, t_mass *map)
 {
 	if (keycode == 53)
 	{
 		mlx_destroy_window(map->mlx, map->wind);
-		system("leaks fractol");
 		exit(1);
 	}
 	mlx_clear_window(map->mlx, map->wind);
 	if (keycode == 123 || keycode == 124 || keycode == 125 ||\
 	keycode == 126)
 		xy(map, keycode);
-	else if (keycode == 69)
-		map->zoom *= 1.1;
-	else if (keycode == 78)
-		map->zoom *= 0.9;
+	else if (keycode == 69 || keycode == 78)
+		change_zoom(map, keycode);
 	else if (keycode == 15)
 		map->red += 1;
 	else if (keycode == 5)
@@ -69,6 +60,10 @@ int		key_press(int keycode, t_mass *map)
 		map->blue += 1;
 	else if (keycode == 49)
 		key_julia(&map->julia);
+	else if (keycode == 83 || keycode == 84 || keycode == 85 ||\
+	keycode == 86 || keycode == 87 || keycode == 88 || keycode == 89 ||\
+	keycode == 91)
+		change_fractal(map, keycode);
 	mult(map);
 	return (0);
 }
@@ -81,12 +76,14 @@ int		mouse_move(int keycode, int x, int y, t_mass *map)
 	{
 		mlx_clear_window(map->mlx, map->wind);
 		map->zoom *= 1.1;
+		map->max_iter += 5;
 		mult(map);
 	}
 	else if (keycode == 5)
 	{
 		mlx_clear_window(map->mlx, map->wind);
 		map->zoom *= 0.9;
+		map->max_iter -= 5;
 		mult(map);
 	}
 	return (0);
@@ -94,7 +91,6 @@ int		mouse_move(int keycode, int x, int y, t_mass *map)
 
 int		julia_move(int x, int y, t_mass *map)
 {
-	ft_printf("%d %d\n", x, y);
 	if (map->mark == 1 && map->julia == 1)
 	{
 		mlx_clear_window(map->mlx, map->wind);

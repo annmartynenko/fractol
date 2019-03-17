@@ -22,7 +22,7 @@
 # define PTHREAD 4
 # define HEIGHT 900
 # define WEIGHT 1300
-# define MAX_ITER 100
+# define MAX_ITER 50
 
 typedef struct	s_calc
 {
@@ -32,7 +32,7 @@ typedef struct	s_calc
 	double		new_im;
 	double		old_re;
 	double		old_im;
-	int			max_iter;
+
 }				t_calc;
 
 typedef struct	s_mass
@@ -55,8 +55,8 @@ typedef struct	s_mass
 	int			red;
 	int			green;
 	int			blue;
-	double		z;
 	int			julia;
+	int			max_iter;
 }				t_mass;
 
 typedef struct	s_read
@@ -79,5 +79,12 @@ void			flower(t_mass *map, int x, int y);
 void			get_color(int x, int y, t_mass *map, int it);
 void			ship(t_mass *map, int x, int y);
 void			print_action(t_mass *map);
+void			tricorn(t_mass *map, int x, int y);
+void			heart(t_mass *map, int x, int y);
+void			buffalo(t_mass *map, int x, int y);
+void			set_start(t_mass *map);
+void			change_zoom(t_mass *map, int keycode);
+void			change_fractal(t_mass *map, int keycode);
+void			key_julia(int *julia);
 
 #endif

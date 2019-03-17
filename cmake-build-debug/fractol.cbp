@@ -88,10 +88,19 @@
 		<Unit filename="/Users/amartyne/am/src/action.c">
 			<Option target="am"/>
 		</Unit>
+		<Unit filename="/Users/amartyne/am/src/action2.c">
+			<Option target="am"/>
+		</Unit>
 		<Unit filename="/Users/amartyne/am/src/formulas.c">
 			<Option target="am"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/am/src/formulas2.c">
+			<Option target="am"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/am/src/formulas3.c">
+			<Option target="am"/>
+		</Unit>
+		<Unit filename="/Users/amartyne/am/src/formulas4.c">
 			<Option target="am"/>
 		</Unit>
 		<Unit filename="/Users/amartyne/am/src/fractol.c">

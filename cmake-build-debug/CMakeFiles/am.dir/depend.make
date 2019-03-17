@@ -5,6 +5,10 @@ CMakeFiles/am.dir/src/action.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/action.c.o: ../src/action.c
 CMakeFiles/am.dir/src/action.c.o: ../src/libft/libft.h
 
+CMakeFiles/am.dir/src/action2.c.o: ../incl/fractol.h
+CMakeFiles/am.dir/src/action2.c.o: ../src/action2.c
+CMakeFiles/am.dir/src/action2.c.o: ../src/libft/libft.h
+
 CMakeFiles/am.dir/src/formulas.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/formulas.c.o: ../src/formulas.c
 CMakeFiles/am.dir/src/formulas.c.o: ../src/libft/libft.h
@@ -12,6 +16,14 @@ CMakeFiles/am.dir/src/formulas.c.o: ../src/libft/libft.h
 CMakeFiles/am.dir/src/formulas2.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/formulas2.c.o: ../src/formulas2.c
 CMakeFiles/am.dir/src/formulas2.c.o: ../src/libft/libft.h
+
+CMakeFiles/am.dir/src/formulas3.c.o: ../incl/fractol.h
+CMakeFiles/am.dir/src/formulas3.c.o: ../src/formulas3.c
+CMakeFiles/am.dir/src/formulas3.c.o: ../src/libft/libft.h
+
+CMakeFiles/am.dir/src/formulas4.c.o: ../incl/fractol.h
+CMakeFiles/am.dir/src/formulas4.c.o: ../src/formulas4.c
+CMakeFiles/am.dir/src/formulas4.c.o: ../src/libft/libft.h
 
 CMakeFiles/am.dir/src/fractol.c.o: ../incl/fractol.h
 CMakeFiles/am.dir/src/fractol.c.o: ../src/fractol.c

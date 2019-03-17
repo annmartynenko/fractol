@@ -18,8 +18,8 @@ int		exit_x(void)
 	ft_printf("Usage: ./fractol [name of fractol]\n");
 	ft_printf("Name variants:\n");
 	ft_printf("- julia\n- mandelbrot\n- flower\n- celtic\n- ship\n");
+	ft_printf("- tricorn\n- heart\n- buffalo\n");
 	ft_printf("\033[0m");
-	system("leaks fractol");
 	exit(1);
 }
 
@@ -35,6 +35,12 @@ void	choose(t_mass *map, int x, int y)
 		celtic(map, x, y);
 	else if (map->mark == 5)
 		ship(map, x, y);
+	else if (map->mark == 6)
+		tricorn(map, x, y);
+	else if (map->mark == 7)
+		heart(map, x, y);
+	else if (map->mark == 8)
+		buffalo(map, x, y);
 }
 
 void	find_name(t_mass *map, char **av)
@@ -49,6 +55,14 @@ void	find_name(t_mass *map, char **av)
 		map->mark = 4;
 	else if (!ft_strcmp(av[1], "ship"))
 		map->mark = 5;
+	else if (!ft_strcmp(av[1], "tricorn"))
+		map->mark = 6;
+	else if (!ft_strcmp(av[1], "heart"))
+		map->mark = 7;
+	else if (!ft_strcmp(av[1], "buffalo"))
+		map->mark = 8;
+	else
+		exit_x();
 }
 
 void	create_map(t_mass *map)
@@ -58,7 +72,7 @@ void	create_map(t_mass *map)
 	map->endian = 0;
 	map->bpp = 32;
 	map->size_line = map->weight;
-	map->zoom = 1;
+	map->zoom = 0.7;
 	map->move_x = -0.5;
 	map->move_y = 0;
 	map->c_re = -0.7;
@@ -67,10 +81,11 @@ void	create_map(t_mass *map)
 	map->blue = 0;
 	map->green = 10;
 	map->julia = 1;
+	map->max_iter = MAX_ITER;
 	map->mlx = mlx_init();
 	map->wind = mlx_new_window(map->mlx, map->weight, map->height, "Fractol");
 	map->img = mlx_new_image(map->mlx, map->weight, map->height);
-	map->image = (char*)mlx_get_data_addr(map->img, &map->bpp,\
+	map->image = mlx_get_data_addr(map->img, &map->bpp,\
 	&map->size_line, &map->endian);
 }
 
