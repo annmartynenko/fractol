@@ -6,9 +6,19 @@
 #    By: amartyne <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/03/25 14:49:21 by amartyne          #+#    #+#              #
-#    Updated: 2018/04/11 16:19:47 by amartyne         ###   ########.fr        #
+#    Updated: 2019/03/18 16:49:48 by amartyne         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
+
+COLOR_OFF=\033[0m#			# Text Reset
+BLACK	=\033[0;30m#		# Black
+RED		=\033[0;31m#		# Red
+GREEN	=\033[0;32m#		# Green
+YELLOW	=\033[0;33m#		# Yellow
+BLUE	=\033[0;34m#		# Blue
+PURPLE	=\033[0;35m#		# Purple
+CYAN	=\033[0;36m#		# Cyan
+WHITE	=\033[0;37m#		# White
 
 NAME = libft.a
 
@@ -37,6 +47,8 @@ ft_printf/for_add.c ft_printf/for_p.c
 
 HDR = libft.h
 
+STRING    =[$(NAME) created]
+
 OUT = $(SRC:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
@@ -44,18 +56,21 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 %.o:%.c
-	gcc $(FLAGS) -c $<
+	@gcc $(FLAGS) -c $<
 
 $(NAME): $(SRC)
-	gcc $(FLAGS) -c $(SRC) -I $(HDR)
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
+	@gcc $(FLAGS) -c $(SRC) -I $(HDR)
+	@ar rc $(NAME) *.o
+	@ranlib $(NAME)
+	@printf "$(BLUE)$(STRING)\n"
 
 clean:
-	rm -f *.o
+	@rm -f *.o
+	@printf  "$(YELLOW)remove libft obj\n"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@printf "$(YELLOW)remove $(NAME)$(COLOR_OFF)\n"
 
 re: fclean
-	make
+	@make

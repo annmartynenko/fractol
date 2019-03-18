@@ -41,7 +41,7 @@ OBJ=$(addprefix $(OBJ_DIR), $(OBJ_NAME))
 
 LIBFT= ./src/libft/libft.a
 
-OK_STRING    =***	$(NAME) created		***
+OK_STRING    =[$(NAME) created]
 
 all: $(OBJ_DIR) $(NAME)
 
@@ -50,15 +50,14 @@ $(OBJ_DIR):
 
 $(NAME): $(OBJ)
 	@$(CC) $(FLAGS) -lmlx -framework OpenGL -framework AppKit -lpthread $(OBJ) -o $(NAME) -I $(INCLD_DIR) $(LIBFT)
-	@printf "\n$(GREEN)$(OK_STRING)\n\n"
+	@printf "\n$(GREEN)$(OK_STRING)\n"
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c $(addprefix $(INCLD_DIR), $(INCLD)) $(LIBFT)
 	@$(CC) $(FLAGS) -c $< -I $(INCLD_DIR) -o $@
-	@printf "$(CYAN)*$(COLOR_OFF)"
+	@printf "$(PURPLE)*$(COLOR_OFF)"
 
 $(LIBFT):
 	@$(MAKE) -C ./src/libft
-	@printf "\n$(GREEN)libft created $(COLOR_OFF)\n\n"
 
 clean:
 	@rm -f $(OBJ)
